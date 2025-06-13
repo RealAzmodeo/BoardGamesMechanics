@@ -2,12 +2,76 @@
   "id": "action_queue",
   "name": "Action Queue",
   "bgg_url": "",
-  "description": "",
-  "core_concepts": [],
-  "parameters": [],
-  "classification": "",
-  "sub_classification": [],
-  "related_mechanics": [],
-  "examples_in_games": [],
-  "notes_on_combination_modification": ""
+  "description": "A mechanic where selected actions are not resolved immediately but are instead placed into a queue or sequence. The actions are then resolved in the order they appear in the queue, often at a later phase or turn. This can involve individual player queues or a central game queue. It introduces elements of planning, prediction, and potential interference or modification of the queue itself.",
+  "core_concepts": [
+    "Delayed resolution",
+    "Programmed actions",
+    "Sequencing",
+    "Planning ahead",
+    "Potential for queue manipulation"
+  ],
+  "parameters": [
+    {
+      "name": "Queue Length/Limit",
+      "type": "integer/string",
+      "description": "The maximum number of actions that can be in the queue at one time, or if it's unlimited.",
+      "default_value": "Unlimited"
+    },
+    {
+      "name": "Resolution Timing",
+      "type": "string",
+      "description": "When are actions in the queue resolved (e.g., end of round, start of next turn, specific phase).",
+      "default_value": "End of round"
+    },
+    {
+      "name": "Queue Modification Rules",
+      "type": "string",
+      "description": "Can the queue be altered after actions are added (e.g., reordering, canceling, inserting actions by players or game events)?",
+      "default_value": "Cannot be modified"
+    },
+    {
+      "name": "Simultaneous vs. Sequential Queuing",
+      "type": "string",
+      "description": "Do players add to their queues simultaneously and secretly, or sequentially in turn order?",
+      "default_value": "Sequentially"
+    }
+  ],
+  "classification": "Action Selection Systems / Game Flow",
+  "sub_classification": [
+    "Programmed Movement",
+    "Delayed Effects"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "programmed_movement",
+      "relationship_type": "specific_type_of"
+    },
+    {
+      "mechanic_id": "simultaneous_action_selection",
+      "relationship_type": "can_be_combined_with"
+    },
+    {
+      "mechanic_id": "rondel",
+      "relationship_type": "alternative_structured_action_system"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "RoboRally",
+      "specific_implementation_notes": "Players program a sequence of 5 movement/turning cards for their robots, which are then revealed and resolved one by one, often leading to chaotic interactions."
+    },
+    {
+      "game_name": "Colt Express",
+      "specific_implementation_notes": "Players play action cards (move, shoot, punch, loot) into a common stack, some face up, some face down, representing a round of actions. The stack is then resolved card by card."
+    },
+    {
+      "game_name": "Space Alert",
+      "specific_implementation_notes": "A real-time cooperative game where players program actions for their characters on individual tracks. After a timed phase of programming, the actions are resolved sequentially against threats."
+    },
+    {
+      "game_name": "Mechs vs. Minions",
+      "specific_implementation_notes": "Players cooperatively draft cards to build command lines (queues) for their mechs, which then execute the programmed actions."
+    }
+  ],
+  "notes_on_combination_modification": "Action queues excel at creating situations where players must anticipate future game states or opponent actions. The fun often comes from seeing plans unfold correctly, or go hilariously wrong due to unexpected changes before resolution. Modifiable by how much information is public about queued actions and the ways queues can be interacted with."
 }

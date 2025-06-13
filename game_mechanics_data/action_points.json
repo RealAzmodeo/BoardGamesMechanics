@@ -2,12 +2,85 @@
   "id": "action_points",
   "name": "Action Points",
   "bgg_url": "",
-  "description": "",
-  "core_concepts": [],
-  "parameters": [],
-  "classification": "",
-  "sub_classification": [],
-  "related_mechanics": [],
-  "examples_in_games": [],
-  "notes_on_combination_modification": ""
+  "description": "A system where players are allotted a certain number of 'action points' (APs) per turn (or other game segment). Players spend these points to perform various actions, with different actions costing different amounts of APs. This mechanic requires players to budget their points wisely to optimize their turn.",
+  "core_concepts": [
+    "Resource management (APs as a resource)",
+    "Turn optimization",
+    "Prioritization",
+    "Variable action cost"
+  ],
+  "parameters": [
+    {
+      "name": "Points per Turn",
+      "type": "integer/string",
+      "description": "The number of action points a player receives each turn (can be fixed, variable, or depend on game state).",
+      "default_value": 3
+    },
+    {
+      "name": "Action Costs",
+      "type": "object/array",
+      "description": "A list of available actions and their respective AP costs.",
+      "default_value": [{"action": "Move", "cost": 1}, {"action": "Attack", "cost": 2}]
+    },
+    {
+      "name": "Carry-over AP",
+      "type": "boolean",
+      "description": "Can unspent action points be saved for future turns?",
+      "default_value": false
+    },
+    {
+      "name": "Maximum AP",
+      "type": "integer",
+      "description": "If AP can be carried over, what is the maximum a player can accumulate?",
+      "default_value": 0
+    },
+    {
+      "name": "Ways to Gain Extra AP",
+      "type": "string",
+      "description": "Are there ways to gain bonus APs (e.g., card effects, sacrificing resources)?",
+      "default_value": "None"
+    }
+  ],
+  "classification": "Resource Management Systems",
+  "sub_classification": [
+    "Turn Allowance",
+    "Action Budgeting"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "movement_points",
+      "relationship_type": "specific_application_of"
+    },
+    {
+      "mechanic_id": "time_track",
+      "relationship_type": "alternative_action_system"
+    },
+    {
+      "mechanic_id": "worker_placement_001",
+      "relationship_type": "alternative_action_selection_system"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Pandemic",
+      "specific_implementation_notes": "Players have 4 action points per turn to spend on moving, treating diseases, building stations, etc."
+    },
+    {
+      "game_name": "Tikal / Mexica / Java (Mask Trilogy by Kramer & Kiesling)",
+      "specific_implementation_notes": "Players typically have a set number of action points per turn to spend on a menu of actions like placing pieces, moving, or exploring."
+    },
+    {
+      "game_name": "Gloomhaven",
+      "specific_implementation_notes": "While not strictly AP, playing two cards determines initiative and grants movement/attack values that function like a budget for the turn."
+    },
+    {
+      "game_name": "XCOM: The Board Game (App-driven phase)",
+      "specific_implementation_notes": "During timed phases, actions (like assigning scientists or deploying soldiers) cost time units, which function similarly to action points under pressure."
+    },
+    {
+      "game_name": "Fallout (Board Game)",
+      "specific_implementation_notes": "Players get a small number of actions per turn to move, explore, fight, or complete quests."
+    }
+  ],
+  "notes_on_combination_modification": "Action points are a very common and versatile mechanic. They can be modified by changing the number of points, the costs of actions (which can even be dynamic), or allowing points to be spent on 'meta' actions like drawing more cards or refreshing abilities. The core is always about making choices within a limited budget."
 }
