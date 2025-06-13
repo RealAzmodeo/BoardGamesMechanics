@@ -2,12 +2,76 @@
   "id": "acting",
   "name": "Acting",
   "bgg_url": "",
-  "description": "",
-  "core_concepts": [],
-  "parameters": [],
-  "classification": "",
-  "sub_classification": [],
-  "related_mechanics": [],
-  "examples_in_games": [],
-  "notes_on_combination_modification": ""
+  "description": "A game mechanic where players attempt to convey information, a word, a phrase, or a character to other players through physical performance, gestures, and sometimes vocalizations without using forbidden words or clues. Success often depends on the actor's skill and the guessers' intuition.",
+  "core_concepts": [
+    "Non-verbal communication",
+    "Performance",
+    "Interpretation",
+    "Guessing",
+    "Time limits (often)"
+  ],
+  "parameters": [
+    {
+      "name": "Clue Complexity",
+      "type": "string",
+      "description": "The difficulty or type of information to be acted out (e.g., single words, movie titles, abstract concepts).",
+      "default_value": "Single words"
+    },
+    {
+      "name": "Time Limit",
+      "type": "integer",
+      "description": "The amount of time a player has to act out their clue.",
+      "default_value": 60
+    },
+    {
+      "name": "Team Play",
+      "type": "boolean",
+      "description": "Whether acting is performed for a team of guessers or for all players.",
+      "default_value": true
+    },
+    {
+      "name": "Scoring Method",
+      "type": "string",
+      "description": "How points are awarded for successful acting/guessing (e.g., points per correct guess, variable points based on difficulty).",
+      "default_value": "Points per correct guess"
+    }
+  ],
+  "classification": "Social Deduction / Communication",
+  "sub_classification": [
+    "Performance-based",
+    "Charades-like"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "drawing",
+      "relationship_type": "similar_objective_different_medium"
+    },
+    {
+      "mechanic_id": "humming_singing",
+      "relationship_type": "similar_objective_different_medium"
+    },
+    {
+      "mechanic_id": "storytelling",
+      "relationship_type": "can_be_combined_with"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Charades (traditional parlor game)",
+      "specific_implementation_notes": "The quintessential acting game."
+    },
+    {
+      "game_name": "Pictionary (if including gestures as part of 'acting')",
+      "specific_implementation_notes": "While primarily drawing, often involves gestural clues."
+    },
+    {
+      "game_name": "Celebrity / Monikers / Time's Up!",
+      "specific_implementation_notes": "A multi-round game where one round often involves acting out names of famous people or characters."
+    },
+    {
+      "game_name": "Concept",
+      "specific_implementation_notes": "While not direct acting, players use universal icons to hint at concepts, which can feel like a form of abstract charades."
+    }
+  ],
+  "notes_on_combination_modification": "Often used as a primary mechanic in party games. Can be modified by restricting types of gestures, adding props, or having different roles for actors (e.g., some can speak, some cannot). The core challenge is conveying meaning under constraints."
 }

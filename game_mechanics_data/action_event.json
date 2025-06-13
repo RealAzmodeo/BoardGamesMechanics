@@ -2,12 +2,76 @@
   "id": "action_event",
   "name": "Action / Event",
   "bgg_url": "",
-  "description": "",
-  "core_concepts": [],
-  "parameters": [],
-  "classification": "",
-  "sub_classification": [],
-  "related_mechanics": [],
-  "examples_in_games": [],
-  "notes_on_combination_modification": ""
+  "description": "A mechanic where players' actions can trigger specific events, or where events occur that players must react to, often drawn from a deck of cards or determined by a die roll. These events can be positive, negative, or neutral, and can significantly alter the game state, introduce new challenges, or provide unexpected opportunities.",
+  "core_concepts": [
+    "Unpredictability",
+    "Reactive gameplay",
+    "Game state modification",
+    "Narrative elements (sometimes)",
+    "Risk/Reward"
+  ],
+  "parameters": [
+    {
+      "name": "Triggering Condition",
+      "type": "string",
+      "description": "What causes an event to occur (e.g., landing on a specific space, drawing a certain card, specific player action, round-based trigger).",
+      "default_value": "Drawing an event card"
+    },
+    {
+      "name": "Event Source",
+      "type": "string",
+      "description": "How events are determined (e.g., event deck, dice roll table, scenario book).",
+      "default_value": "Event deck"
+    },
+    {
+      "name": "Event Impact Scope",
+      "type": "string",
+      "description": "Who or what the event affects (e.g., specific player, all players, global game state).",
+      "default_value": "All players"
+    },
+    {
+      "name": "Player Agency",
+      "type": "string",
+      "description": "The degree to which players can influence or mitigate events (e.g., none, can cancel with specific card, can choose between options).",
+      "default_value": "None"
+    }
+  ],
+  "classification": "Game Flow / State Changers",
+  "sub_classification": [
+    "Random Events",
+    "Triggered Effects"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "dice_rolling",
+      "relationship_type": "can_be_trigger_for"
+    },
+    {
+      "mechanic_id": "card_play_conflict_resolution",
+      "relationship_type": "can_be_source_of_events"
+    },
+    {
+      "mechanic_id": "scenario_mission_campaign_game",
+      "relationship_type": "often_incorporates"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Pandemic",
+      "specific_implementation_notes": "Epidemic cards are events that significantly escalate the game's threat."
+    },
+    {
+      "game_name": "Talisman",
+      "specific_implementation_notes": "Many spaces on the board require drawing Adventure cards, which are a mix of events, encounters, and items."
+    },
+    {
+      "game_name": "Betrayal at House on the Hill",
+      "specific_implementation_notes": "Event cards are drawn when exploring new rooms, often leading to the 'Haunt' which is a major game-changing event."
+    },
+    {
+      "game_name": "King of Tokyo",
+      "specific_implementation_notes": "Power cards often have immediate event-like effects when played."
+    }
+  ],
+  "notes_on_combination_modification": "Events can add significant replayability and excitement but need to be balanced to avoid excessive randomness or kingmaking. The predictability and impact of events are key tuning parameters. Can be combined with almost any core mechanic to add thematic flavor or unexpected twists."
 }

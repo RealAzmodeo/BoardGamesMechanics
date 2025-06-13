@@ -2,12 +2,76 @@
   "id": "action_drafting",
   "name": "Action Drafting",
   "bgg_url": "",
-  "description": "",
-  "core_concepts": [],
-  "parameters": [],
-  "classification": "",
-  "sub_classification": [],
-  "related_mechanics": [],
-  "examples_in_games": [],
-  "notes_on_combination_modification": ""
+  "description": "A mechanic where players select actions from a common pool of available actions. Once an action is selected, it might become unavailable to other players, or become more expensive, or less effective for subsequent selections in the current round. This creates tension as players must prioritize which actions are most critical to them before others snatch them up.",
+  "core_concepts": [
+    "Action selection",
+    "Resource management (actions as a resource)",
+    "Player interaction (denial/competition)",
+    "Turn order significance",
+    "Prioritization"
+  ],
+  "parameters": [
+    {
+      "name": "Pool Size/Refresh Rate",
+      "type": "string",
+      "description": "How many actions are available at a time and how/when the pool is refreshed (e.g., fixed pool, new actions added each round, actions taken are temporarily removed).",
+      "default_value": "Fixed pool per round"
+    },
+    {
+      "name": "Selection Cost/Effect Modification",
+      "type": "string",
+      "description": "Does selecting an action change its cost or effect for others (e.g., first player pays X, second pays X+1; or action is weaker if taken later).",
+      "default_value": "No change"
+    },
+    {
+      "name": "Exclusivity",
+      "type": "boolean",
+      "description": "Can an action be chosen by only one player per round/availability period?",
+      "default_value": true
+    },
+    {
+      "name": "Number of Drafts per Player",
+      "type": "integer",
+      "description": "How many actions a player can draft in a given round or phase.",
+      "default_value": 1
+    }
+  ],
+  "classification": "Action Selection Systems",
+  "sub_classification": [
+    "Drafting",
+    "Worker Placement (if actions are tied to spaces that are drafted)"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "worker_placement_001",
+      "relationship_type": "often_a_form_of"
+    },
+    {
+      "mechanic_id": "open_drafting",
+      "relationship_type": "general_category_includes"
+    },
+    {
+      "mechanic_id": "turn_order_claim_action",
+      "relationship_type": "related_concept"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Puerto Rico",
+      "specific_implementation_notes": "Players select role tiles (actions) one by one. Each role provides a benefit to all players but a special privilege to the drafting player. Unchosen roles accumulate coins, making them more attractive later."
+    },
+    {
+      "game_name": "Race for the Galaxy",
+      "specific_implementation_notes": "Players simultaneously and secretly choose one of seven action cards. Chosen actions are then resolved, with players who chose a specific action getting a bonus for it."
+    },
+    {
+      "game_name": "Twilight Imperium",
+      "specific_implementation_notes": "Players choose Strategy Cards which grant powerful primary actions to the owner and secondary, weaker actions to other players."
+    },
+    {
+      "game_name": "Terra Mystica / Gaia Project",
+      "specific_implementation_notes": "Action spaces are limited and taking one prevents others from using that specific action in the round."
+    }
+  ],
+  "notes_on_combination_modification": "Action drafting is a very flexible mechanic. It can be combined with engine building, resource management, or area control. Modifications can include changing the number of available actions, how they refresh, or introducing player-specific actions they can draft. The key is the competitive selection from a shared pool."
 }
