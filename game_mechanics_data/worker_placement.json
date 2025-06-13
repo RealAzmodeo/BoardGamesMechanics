@@ -1,0 +1,46 @@
+{
+  "id": "worker_placement_001",
+  "name": "Worker Placement",
+  "description": "Players take turns placing their worker tokens (meeples) on available action spaces on a common game board. Placing a worker typically triggers an action associated with that space. Action spaces are often limited, creating competition.",
+  "core_concepts": [
+    "Action selection",
+    "Resource management",
+    "Turn order significance",
+    "Blocking/Area denial"
+  ],
+  "parameters": [
+    {
+      "name": "Number of Workers",
+      "type": "integer",
+      "description": "How many workers each player controls.",
+      "default_value": 3
+    },
+    {
+      "name": "Action Space Exclusivity",
+      "type": "boolean",
+      "description": "Can multiple workers occupy the same action space?",
+      "default_value": true
+    }
+  ],
+  "classification": "Action Selection Systems",
+  "sub_classification": [
+    "Exclusive Action Choice"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "action_points_001",
+      "relationship_type": "alternative_to"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Caylus",
+      "specific_implementation_notes": "One of the earliest prominent examples, with a moving provost affecting action resolution."
+    },
+    {
+      "game_name": "Agricola",
+      "specific_implementation_notes": "Features a growing number of action spaces throughout the game."
+    }
+  ],
+  "notes_on_combination_modification": "Often combined with resource conversion or set collection. Can be modified by adding special worker abilities or dynamic action spaces."
+}

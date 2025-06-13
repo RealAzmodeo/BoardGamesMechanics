@@ -1,0 +1,33 @@
+{
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "core_concepts": [
+    "string"
+  ],
+  "parameters": [
+    {
+      "name": "string",
+      "type": "string",
+      "description": "string",
+      "default_value": "any"
+    }
+  ],
+  "classification": "string",
+  "sub_classification": [
+    "string"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "string",
+      "relationship_type": "string"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "string",
+      "specific_implementation_notes": "string"
+    }
+  ],
+  "notes_on_combination_modification": "string"
+}

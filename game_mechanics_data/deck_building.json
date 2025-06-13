@@ -1,0 +1,56 @@
+{
+  "id": "deck_building_001",
+  "name": "Deck, Bag, or Pool Building",
+  "description": "Players start with a small, identical set of cards/components. Throughout the game, they acquire new cards/components from a central supply and add them to their personal deck/pool, gradually making it more powerful or tailored to their strategy. Players typically draw from and shuffle their personal decks.",
+  "core_concepts": [
+    "Resource management (cards as resources)",
+    "Engine building",
+    "Probability management",
+    "Delayed gratification"
+  ],
+  "parameters": [
+    {
+      "name": "Starting Deck Size/Composition",
+      "type": "integer/object",
+      "description": "The initial number and type of cards players begin with."
+    },
+    {
+      "name": "Market/Supply Availability",
+      "type": "string",
+      "description": "How new cards are made available (e.g., 'static market', 'rotating display').",
+      "default_value": "static market"
+    },
+    {
+      "name": "Culling/Trashing Mechanism",
+      "type": "boolean",
+      "description": "Are players able to remove weaker cards from their deck?",
+      "default_value": true
+    }
+  ],
+  "classification": "Resource Management Systems",
+  "sub_classification": [
+    "Card Management",
+    "Pool Management"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "hand_management_001",
+      "relationship_type": "synergistic_with"
+    },
+    {
+      "mechanic_id": "set_collection_001",
+      "relationship_type": "often_combined_with"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Dominion",
+      "specific_implementation_notes": "The pioneering game for this mechanic, focusing purely on deck-building."
+    },
+    {
+      "game_name": "Clank!",
+      "specific_implementation_notes": "Combines deck-building with a board for movement and dungeon delving."
+    }
+  ],
+  "notes_on_combination_modification": "Can be combined with almost any other objective mechanic. Modifiable by types of cards available (attacks, defense, currency, victory points) or how cards are acquired/played."
+}
