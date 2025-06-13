@@ -1,0 +1,76 @@
+{
+  "id": "advantage_token",
+  "name": "Advantage Token",
+  "bgg_url": "",
+  "description": "A mechanic where players can earn or are granted tokens that provide a temporary or situational benefit. These benefits often involve re-rolling dice, modifying die rolls, gaining extra resources, taking an extra action, or breaking a specific game rule. They serve as a way to mitigate luck or provide a small, consumable boost.",
+  "core_concepts": [
+    "Luck mitigation",
+    "Consumable benefits",
+    "Situational power-ups",
+    "Resource management (tokens as a special resource)"
+  ],
+  "parameters": [
+    {
+      "name": "Token Effect",
+      "type": "string/object",
+      "description": "The specific benefit granted by spending the token (e.g., re-roll a die, +1 to a roll, draw a card, ignore a cost).",
+      "default_value": "Re-roll a die"
+    },
+    {
+      "name": "Acquisition Method",
+      "type": "string",
+      "description": "How are advantage tokens earned (e.g., specific actions, achieving a goal, compensation for a negative event, starting bonus).",
+      "default_value": "Achieving a minor goal"
+    },
+    {
+      "name": "Usage Limitation",
+      "type": "string",
+      "description": "When or how often can tokens be used (e.g., one per roll, one per turn, only on specific actions).",
+      "default_value": "One per roll/check"
+    },
+    {
+      "name": "Maximum Holding",
+      "type": "integer",
+      "description": "The maximum number of advantage tokens a player can hold at one time.",
+      "default_value": 3
+    }
+  ],
+  "classification": "Resource Management Systems / Game State Modifiers",
+  "sub_classification": [
+    "Luck Control",
+    "Temporary Buffs"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "re_rolling_and_locking",
+      "relationship_type": "advantage_tokens_often_grant_this"
+    },
+    {
+      "mechanic_id": "dice_rolling",
+      "relationship_type": "often_used_to_influence"
+    },
+    {
+      "mechanic_id": "catch_the_leader",
+      "relationship_type": "can_be_a_form_of"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Dungeons & Dragons (5th Edition)",
+      "specific_implementation_notes": "The 'Advantage' system itself, where a player rolls two d20s and takes the higher, functions like a built-in advantage token for certain situations. Some abilities grant 'Inspiration' which can be spent to gain Advantage."
+    },
+    {
+      "game_name": "Star Wars: Imperial Assault / Descent: Journeys in the Dark",
+      "specific_implementation_notes": "Focus tokens or other specific tokens can be spent to add successes, reroll dice, or trigger special abilities."
+    },
+    {
+      "game_name": "Arkham Horror: The Card Game",
+      "specific_implementation_notes": "Resources can sometimes be spent to boost skill checks, acting like a consumable advantage."
+    },
+    {
+      "game_name": "Too Many Bones",
+      "specific_implementation_notes": "Various 'boon' dice or specific skill effects can grant temporary advantages or re-rolls."
+    }
+  ],
+  "notes_on_combination_modification": "Advantage tokens are a good way to give players some control over random outcomes without eliminating randomness entirely. They can be generic or tied to specific types of actions or stats. The economy of how these tokens are gained and spent is key to their impact on the game."
+}

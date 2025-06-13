@@ -1,0 +1,81 @@
+{
+  "id": "action_timer",
+  "name": "Action Timer",
+  "bgg_url": "",
+  "description": "A mechanic that uses a timer (sand timer, digital countdown, or other methods) to limit the time players have to perform their actions, make decisions, or complete a phase. This adds pressure, encourages quick thinking, and can create a sense of urgency or chaos. It's often used in real-time or cooperative games.",
+  "core_concepts": [
+    "Time pressure",
+    "Real-time gameplay (often)",
+    "Decision-making under constraint",
+    "Speed and efficiency",
+    "Simultaneous play (sometimes)"
+  ],
+  "parameters": [
+    {
+      "name": "Timer Duration",
+      "type": "integer/string",
+      "description": "The length of time players have for the timed segment (e.g., 30 seconds, 5 minutes).",
+      "default_value": "60 seconds"
+    },
+    {
+      "name": "Scope of Timer",
+      "type": "string",
+      "description": "What does the timer limit (e.g., a single player's turn, a specific phase for all players, the entire game).",
+      "default_value": "Player's turn"
+    },
+    {
+      "name": "Consequences of Timer Expiry",
+      "type": "string",
+      "description": "What happens if the timer runs out before actions are complete (e.g., turn ends immediately, penalty incurred, phase ends).",
+      "default_value": "Turn ends immediately"
+    },
+    {
+      "name": "Timer Type",
+      "type": "string",
+      "description": "The physical or conceptual type of timer used (e.g., sand timer, digital clock, app-based, number of rounds as a meta-timer).",
+      "default_value": "Sand timer"
+    }
+  ],
+  "classification": "Game Flow / Constraints",
+  "sub_classification": [
+    "Real-Time",
+    "Time Pressure"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "real_time",
+      "relationship_type": "often_a_core_component_of"
+    },
+    {
+      "mechanic_id": "simultaneous_action_selection",
+      "relationship_type": "can_be_combined_with_under_time_pressure"
+    },
+    {
+      "mechanic_id": "speed_matching",
+      "relationship_type": "related_concept_emphasizing_speed"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Space Alert",
+      "specific_implementation_notes": "Players have a limited real-time window (soundtrack-driven) to plan and play action cards."
+    },
+    {
+      "game_name": "Galaxy Trucker",
+      "specific_implementation_notes": "Players simultaneously grab ship components from a common pool under time pressure (sand timer) to build their ships."
+    },
+    {
+      "game_name": "Kitchen Rush",
+      "specific_implementation_notes": "Uses sand timers as worker tokens to perform actions; an action is blocked until the timer (worker) is free."
+    },
+    {
+      "game_name": "Bohnanza (during trading phase, implicitly)",
+      "specific_implementation_notes": "While not a formal timer, social pressure and the desire to make deals quickly before others do creates a time-sensitive trading phase."
+    },
+    {
+      "game_name": "XCOM: The Board Game",
+      "specific_implementation_notes": "An integrated app provides timed challenges and phases where players must make decisions and resolve tasks before time runs out."
+    }
+  ],
+  "notes_on_combination_modification": "Action timers are excellent for creating excitement and a frantic pace. They can be challenging for players who prefer deliberate planning. The strictness of the timer and the penalty for exceeding it are key balancing points. Can be used for entire game rounds or specific, high-pressure phases."
+}
