@@ -1,0 +1,770 @@
+[
+  {
+    "name": "Acting",
+    "id": "acting"
+  },
+  {
+    "name": "Action / Event",
+    "id": "action_event"
+  },
+  {
+    "name": "Action Drafting",
+    "id": "action_drafting"
+  },
+  {
+    "name": "Action Points",
+    "id": "action_points"
+  },
+  {
+    "name": "Action Queue",
+    "id": "action_queue"
+  },
+  {
+    "name": "Action Retrieval",
+    "id": "action_retrieval"
+  },
+  {
+    "name": "Action Timer",
+    "id": "action_timer"
+  },
+  {
+    "name": "Advantage Token",
+    "id": "advantage_token"
+  },
+  {
+    "name": "Alliances",
+    "id": "alliances"
+  },
+  {
+    "name": "Area Majority / Influence",
+    "id": "area_majority_influence"
+  },
+  {
+    "name": "Area Movement",
+    "id": "area_movement"
+  },
+  {
+    "name": "Area-Impulse",
+    "id": "area_impulse"
+  },
+  {
+    "name": "Auction / Bidding",
+    "id": "auction_bidding"
+  },
+  {
+    "name": "Auction Compensation",
+    "id": "auction_compensation"
+  },
+  {
+    "name": "Auction: Dexterity",
+    "id": "auction_dexterity"
+  },
+  {
+    "name": "Auction: Dutch",
+    "id": "auction_dutch"
+  },
+  {
+    "name": "Auction: Dutch Priority",
+    "id": "auction_dutch_priority"
+  },
+  {
+    "name": "Auction: English",
+    "id": "auction_english"
+  },
+  {
+    "name": "Auction: Fixed Placement",
+    "id": "auction_fixed_placement"
+  },
+  {
+    "name": "Auction: Multiple Lot",
+    "id": "auction_multiple_lot"
+  },
+  {
+    "name": "Auction: Once Around",
+    "id": "auction_once_around"
+  },
+  {
+    "name": "Auction: Sealed Bid",
+    "id": "auction_sealed_bid"
+  },
+  {
+    "name": "Auction: Turn Order Until Pass",
+    "id": "auction_turn_order_until_pass"
+  },
+  {
+    "name": "Automatic Resource Growth",
+    "id": "automatic_resource_growth"
+  },
+  {
+    "name": "Betting and Bluffing",
+    "id": "betting_and_bluffing"
+  },
+  {
+    "name": "Bias",
+    "id": "bias"
+  },
+  {
+    "name": "Bids As Wagers",
+    "id": "bids_as_wagers"
+  },
+  {
+    "name": "Bingo",
+    "id": "bingo"
+  },
+  {
+    "name": "Bribery",
+    "id": "bribery"
+  },
+  {
+    "name": "Campaign / Battle Card Driven",
+    "id": "campaign_battle_card_driven"
+  },
+  {
+    "name": "Card Play Conflict Resolution",
+    "id": "card_play_conflict_resolution"
+  },
+  {
+    "name": "Catch the Leader",
+    "id": "catch_the_leader"
+  },
+  {
+    "name": "Chaining",
+    "id": "chaining"
+  },
+  {
+    "name": "Chit-Pull System",
+    "id": "chit_pull_system"
+  },
+  {
+    "name": "Closed Drafting",
+    "id": "closed_drafting"
+  },
+  {
+    "name": "Closed Economy Auction",
+    "id": "closed_economy_auction"
+  },
+  {
+    "name": "Command Cards",
+    "id": "command_cards"
+  },
+  {
+    "name": "Commodity Speculation",
+    "id": "commodity_speculation"
+  },
+  {
+    "name": "Communication Limits",
+    "id": "communication_limits"
+  },
+  {
+    "name": "Connections",
+    "id": "connections"
+  },
+  {
+    "name": "Constrained Bidding",
+    "id": "constrained_bidding"
+  },
+  {
+    "name": "Contracts",
+    "id": "contracts"
+  },
+  {
+    "name": "Cooperative Game",
+    "id": "cooperative_game"
+  },
+  {
+    "name": "Crayon Rail System",
+    "id": "crayon_rail_system"
+  },
+  {
+    "name": "Critical Hits and Failures",
+    "id": "critical_hits_and_failures"
+  },
+  {
+    "name": "Cube Tower",
+    "id": "cube_tower"
+  },
+  {
+    "name": "Deck Construction",
+    "id": "deck_construction"
+  },
+  {
+    "name": "Deck, Bag, and Pool Building",
+    "id": "deck_bag_and_pool_building"
+  },
+  {
+    "name": "Deduction",
+    "id": "deduction"
+  },
+  {
+    "name": "Delayed Purchase",
+    "id": "delayed_purchase"
+  },
+  {
+    "name": "Dice Rolling",
+    "id": "dice_rolling"
+  },
+  {
+    "name": "Die Icon Resolution",
+    "id": "die_icon_resolution"
+  },
+  {
+    "name": "Different Dice Movement",
+    "id": "different_dice_movement"
+  },
+  {
+    "name": "Drawing",
+    "id": "drawing"
+  },
+  {
+    "name": "Elapsed Real Time Ending",
+    "id": "elapsed_real_time_ending"
+  },
+  {
+    "name": "Enclosure",
+    "id": "enclosure"
+  },
+  {
+    "name": "End Game Bonuses",
+    "id": "end_game_bonuses"
+  },
+  {
+    "name": "Events",
+    "id": "events"
+  },
+  {
+    "name": "Finale Ending",
+    "id": "finale_ending"
+  },
+  {
+    "name": "Flicking",
+    "id": "flicking"
+  },
+  {
+    "name": "Follow",
+    "id": "follow"
+  },
+  {
+    "name": "Force Commitment",
+    "id": "force_commitment"
+  },
+  {
+    "name": "Grid Coverage",
+    "id": "grid_coverage"
+  },
+  {
+    "name": "Grid Movement",
+    "id": "grid_movement"
+  },
+  {
+    "name": "Hand Management",
+    "id": "hand_management"
+  },
+  {
+    "name": "Hexagon Grid",
+    "id": "hexagon_grid"
+  },
+  {
+    "name": "Hidden Movement",
+    "id": "hidden_movement"
+  },
+  {
+    "name": "Hidden Roles",
+    "id": "hidden_roles"
+  },
+  {
+    "name": "Hidden Victory Points",
+    "id": "hidden_victory_points"
+  },
+  {
+    "name": "Highest-Lowest Scoring",
+    "id": "highest_lowest_scoring"
+  },
+  {
+    "name": "Hot Potato",
+    "id": "hot_potato"
+  },
+  {
+    "name": "I Cut, You Choose",
+    "id": "i_cut_you_choose"
+  },
+  {
+    "name": "Impulse Movement",
+    "id": "impulse_movement"
+  },
+  {
+    "name": "Income",
+    "id": "income"
+  },
+  {
+    "name": "Increase Value of Unchosen Resources",
+    "id": "increase_value_of_unchosen_resources"
+  },
+  {
+    "name": "Induction",
+    "id": "induction"
+  },
+  {
+    "name": "Interrupts",
+    "id": "interrupts"
+  },
+  {
+    "name": "Investment",
+    "id": "investment"
+  },
+  {
+    "name": "Kill Steal",
+    "id": "kill_steal"
+  },
+  {
+    "name": "King of the Hill",
+    "id": "king_of_the_hill"
+  },
+  {
+    "name": "Ladder Climbing",
+    "id": "ladder_climbing"
+  },
+  {
+    "name": "Layering",
+    "id": "layering"
+  },
+  {
+    "name": "Legacy Game",
+    "id": "legacy_game"
+  },
+  {
+    "name": "Line Drawing",
+    "id": "line_drawing"
+  },
+  {
+    "name": "Line of Sight",
+    "id": "line_of_sight"
+  },
+  {
+    "name": "Loans",
+    "id": "loans"
+  },
+  {
+    "name": "Lose a Turn",
+    "id": "lose_a_turn"
+  },
+  {
+    "name": "Mancala",
+    "id": "mancala"
+  },
+  {
+    "name": "Map Addition",
+    "id": "map_addition"
+  },
+  {
+    "name": "Map Deformation",
+    "id": "map_deformation"
+  },
+  {
+    "name": "Map Reduction",
+    "id": "map_reduction"
+  },
+  {
+    "name": "Market",
+    "id": "market"
+  },
+  {
+    "name": "Matching",
+    "id": "matching"
+  },
+  {
+    "name": "Measurement Movement",
+    "id": "measurement_movement"
+  },
+  {
+    "name": "Melding and Splaying",
+    "id": "melding_and_splaying"
+  },
+  {
+    "name": "Memory",
+    "id": "memory"
+  },
+  {
+    "name": "Minimap Resolution",
+    "id": "minimap_resolution"
+  },
+  {
+    "name": "Modular Board",
+    "id": "modular_board"
+  },
+  {
+    "name": "Move Through Deck",
+    "id": "move_through_deck"
+  },
+  {
+    "name": "Movement Points",
+    "id": "movement_points"
+  },
+  {
+    "name": "Movement Template",
+    "id": "movement_template"
+  },
+  {
+    "name": "Moving Multiple Units",
+    "id": "moving_multiple_units"
+  },
+  {
+    "name": "Multi-Use Cards",
+    "id": "multi_use_cards"
+  },
+  {
+    "name": "Multiple Maps",
+    "id": "multiple_maps"
+  },
+  {
+    "name": "Narrative Choice / Paragraph",
+    "id": "narrative_choice_paragraph"
+  },
+  {
+    "name": "Negotiation",
+    "id": "negotiation"
+  },
+  {
+    "name": "Neighbor Scope",
+    "id": "neighbor_scope"
+  },
+  {
+    "name": "Network and Route Building",
+    "id": "network_and_route_building"
+  },
+  {
+    "name": "Once-Per-Game Abilities",
+    "id": "once_per_game_abilities"
+  },
+  {
+    "name": "Open Drafting",
+    "id": "open_drafting"
+  },
+  {
+    "name": "Order Counters",
+    "id": "order_counters"
+  },
+  {
+    "name": "Ordering",
+    "id": "ordering"
+  },
+  {
+    "name": "Ownership",
+    "id": "ownership"
+  },
+  {
+    "name": "Paper-and-Pencil",
+    "id": "paper_and_pencil"
+  },
+  {
+    "name": "Passed Action Token",
+    "id": "passed_action_token"
+  },
+  {
+    "name": "Pattern Building",
+    "id": "pattern_building"
+  },
+  {
+    "name": "Pattern Movement",
+    "id": "pattern_movement"
+  },
+  {
+    "name": "Pattern Recognition",
+    "id": "pattern_recognition"
+  },
+  {
+    "name": "Physical Removal",
+    "id": "physical_removal"
+  },
+  {
+    "name": "Pick-up and Deliver",
+    "id": "pick_up_and_deliver"
+  },
+  {
+    "name": "Pieces as Map",
+    "id": "pieces_as_map"
+  },
+  {
+    "name": "Player Elimination",
+    "id": "player_elimination"
+  },
+  {
+    "name": "Player Judge",
+    "id": "player_judge"
+  },
+  {
+    "name": "Point to Point Movement",
+    "id": "point_to_point_movement"
+  },
+  {
+    "name": "Predictive Bid",
+    "id": "predictive_bid"
+  },
+  {
+    "name": "Prisoner's Dilemma",
+    "id": "prisoner_s_dilemma"
+  },
+  {
+    "name": "Programmed Movement",
+    "id": "programmed_movement"
+  },
+  {
+    "name": "Push Your Luck",
+    "id": "push_your_luck"
+  },
+  {
+    "name": "Questions and Answers",
+    "id": "questions_and_answers"
+  },
+  {
+    "name": "Race",
+    "id": "race"
+  },
+  {
+    "name": "Random Production",
+    "id": "random_production"
+  },
+  {
+    "name": "Ratio / Combat Results Table",
+    "id": "ratio_combat_results_table"
+  },
+  {
+    "name": "Re-rolling and Locking",
+    "id": "re_rolling_and_locking"
+  },
+  {
+    "name": "Real-Time",
+    "id": "real_time"
+  },
+  {
+    "name": "Relative Movement",
+    "id": "relative_movement"
+  },
+  {
+    "name": "Resource Queue",
+    "id": "resource_queue"
+  },
+  {
+    "name": "Resource to Move",
+    "id": "resource_to_move"
+  },
+  {
+    "name": "Rock-Paper-Scissors",
+    "id": "rock_paper_scissors"
+  },
+  {
+    "name": "Role Playing",
+    "id": "role_playing"
+  },
+  {
+    "name": "Roles with Asymmetric Information",
+    "id": "roles_with_asymmetric_information"
+  },
+  {
+    "name": "Roll / Spin and Move",
+    "id": "roll_spin_and_move"
+  },
+  {
+    "name": "Rondel",
+    "id": "rondel"
+  },
+  {
+    "name": "Scenario / Mission / Campaign Game",
+    "id": "scenario_mission_campaign_game"
+  },
+  {
+    "name": "Score-and-Reset Game",
+    "id": "score_and_reset_game"
+  },
+  {
+    "name": "Secret Unit Deployment",
+    "id": "secret_unit_deployment"
+  },
+  {
+    "name": "Selection Order Bid",
+    "id": "selection_order_bid"
+  },
+  {
+    "name": "Semi-Cooperative Game",
+    "id": "semi_cooperative_game"
+  },
+  {
+    "name": "Set Collection",
+    "id": "set_collection"
+  },
+  {
+    "name": "Simulation",
+    "id": "simulation"
+  },
+  {
+    "name": "Simultaneous Action Selection",
+    "id": "simultaneous_action_selection"
+  },
+  {
+    "name": "Singing",
+    "id": "singing"
+  },
+  {
+    "name": "Single Loser Game",
+    "id": "single_loser_game"
+  },
+  {
+    "name": "Slide / Push",
+    "id": "slide_push"
+  },
+  {
+    "name": "Solo / Solitaire Game",
+    "id": "solo_solitaire_game"
+  },
+  {
+    "name": "Speed Matching",
+    "id": "speed_matching"
+  },
+  {
+    "name": "Spelling",
+    "id": "spelling"
+  },
+  {
+    "name": "Square Grid",
+    "id": "square_grid"
+  },
+  {
+    "name": "Stacking and Balancing",
+    "id": "stacking_and_balancing"
+  },
+  {
+    "name": "Stat Check Resolution",
+    "id": "stat_check_resolution"
+  },
+  {
+    "name": "Static Capture",
+    "id": "static_capture"
+  },
+  {
+    "name": "Stock Holding",
+    "id": "stock_holding"
+  },
+  {
+    "name": "Storytelling",
+    "id": "storytelling"
+  },
+  {
+    "name": "Sudden Death Ending",
+    "id": "sudden_death_ending"
+  },
+  {
+    "name": "Tags",
+    "id": "tags"
+  },
+  {
+    "name": "Take That",
+    "id": "take_that"
+  },
+  {
+    "name": "Targeted Clues",
+    "id": "targeted_clues"
+  },
+  {
+    "name": "Team-Based Game",
+    "id": "team_based_game"
+  },
+  {
+    "name": "Tech Trees / Tech Tracks",
+    "id": "tech_trees_tech_tracks"
+  },
+  {
+    "name": "Three Dimensional Movement",
+    "id": "three_dimensional_movement"
+  },
+  {
+    "name": "Tile Placement",
+    "id": "tile_placement"
+  },
+  {
+    "name": "Track Movement",
+    "id": "track_movement"
+  },
+  {
+    "name": "Trading",
+    "id": "trading"
+  },
+  {
+    "name": "Traitor Game",
+    "id": "traitor_game"
+  },
+  {
+    "name": "Trick-taking",
+    "id": "trick_taking"
+  },
+  {
+    "name": "Tug of War",
+    "id": "tug_of_war"
+  },
+  {
+    "name": "Turn Order: Auction",
+    "id": "turn_order_auction"
+  },
+  {
+    "name": "Turn Order: Claim Action",
+    "id": "turn_order_claim_action"
+  },
+  {
+    "name": "Turn Order: Pass Order",
+    "id": "turn_order_pass_order"
+  },
+  {
+    "name": "Turn Order: Progressive",
+    "id": "turn_order_progressive"
+  },
+  {
+    "name": "Turn Order: Random",
+    "id": "turn_order_random"
+  },
+  {
+    "name": "Turn Order: Role Order",
+    "id": "turn_order_role_order"
+  },
+  {
+    "name": "Turn Order: Stat-Based",
+    "id": "turn_order_stat_based"
+  },
+  {
+    "name": "Turn Order: Time Track",
+    "id": "turn_order_time_track"
+  },
+  {
+    "name": "Variable Phase Order",
+    "id": "variable_phase_order"
+  },
+  {
+    "name": "Variable Player Powers",
+    "id": "variable_player_powers"
+  },
+  {
+    "name": "Variable Set-up",
+    "id": "variable_set_up"
+  },
+  {
+    "name": "Victory Points as a Resource",
+    "id": "victory_points_as_a_resource"
+  },
+  {
+    "name": "Voting",
+    "id": "voting"
+  },
+  {
+    "name": "Worker Placement",
+    "id": "worker_placement"
+  },
+  {
+    "name": "Worker Placement with Dice Workers",
+    "id": "worker_placement_with_dice_workers"
+  },
+  {
+    "name": "Worker Placement, Different Worker Types",
+    "id": "worker_placement_different_worker_types"
+  },
+  {
+    "name": "Zone of Control",
+    "id": "zone_of_control"
+  }
+]

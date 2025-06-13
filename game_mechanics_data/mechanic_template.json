@@ -1,6 +1,7 @@
 {
   "id": "string",
   "name": "string",
+  "bgg_url": "string",
   "description": "string",
   "core_concepts": [
     "string"
