@@ -1,0 +1,76 @@
+{
+  "id": "action_retrieval",
+  "name": "Action Retrieval",
+  "bgg_url": "",
+  "description": "A mechanic where players have a way to regain access to actions or abilities that have already been used and would otherwise be unavailable. This could involve spending resources, using a specific action, or meeting certain conditions. It allows for reuse of powerful or versatile options, but often at a cost or with limitations.",
+  "core_concepts": [
+    "Resource management (actions/abilities as a recoverable resource)",
+    "Strategic reuse",
+    "Cost-benefit analysis",
+    "Tempo control"
+  ],
+  "parameters": [
+    {
+      "name": "Retrieval Cost/Condition",
+      "type": "string/object",
+      "description": "What must a player do or pay to retrieve an action (e.g., spend resources, discard cards, use a specific 'retrieve' action, pass a turn).",
+      "default_value": "Spend a resource"
+    },
+    {
+      "name": "Scope of Retrieval",
+      "type": "string",
+      "description": "What can be retrieved (e.g., any used action, only specific types of actions, actions from a personal discard pile, actions from a common pool).",
+      "default_value": "Actions from a personal discard pile"
+    },
+    {
+      "name": "Frequency/Limit of Retrieval",
+      "type": "string",
+      "description": "How often or how many times can actions be retrieved (e.g., once per round, limited number of times per game, no limit but increasing cost).",
+      "default_value": "Once per round"
+    },
+    {
+      "name": "State of Retrieved Action",
+      "type": "string",
+      "description": "In what state is the action retrieved (e.g., back to hand, immediately usable, available next turn).",
+      "default_value": "Back to hand"
+    }
+  ],
+  "classification": "Resource Management Systems / Action Modification",
+  "sub_classification": [
+    "Ability Recovery",
+    "Discard Pile Interaction"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "deck_building_001",
+      "relationship_type": "can_be_a_feature_within (retrieving cards)"
+    },
+    {
+      "mechanic_id": "action_points",
+      "relationship_type": "retrieval_might_cost_action_points"
+    },
+    {
+      "mechanic_id": "hand_management_001",
+      "relationship_type": "often_involves_managing_retrieved_actions_in_hand"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Concordia",
+      "specific_implementation_notes": "Playing the 'Tribune' card allows a player to retrieve all previously played cards back into their hand, often for a monetary payment."
+    },
+    {
+      "game_name": "Mage Knight Board Game",
+      "specific_implementation_notes": "Some abilities or sites allow players to retrieve used spell cards or action cards from their discard pile."
+    },
+    {
+      "game_name": "Orléans",
+      "specific_implementation_notes": "Certain building effects or character abilities allow players to retrieve workers (followers) from their bag or from used locations, making them available again."
+    },
+    {
+      "game_name": "Great Western Trail",
+      "specific_implementation_notes": "Players cycle through their deck of cattle cards. Reaching Kansas City allows them to 'retrieve' their entire discard pile by reshuffling it into their deck."
+    }
+  ],
+  "notes_on_combination_modification": "Action retrieval adds a layer of strategic depth, allowing players to double down on effective strategies or reuse critical abilities. The cost and conditions for retrieval are key balancing factors. It can be powerful when combined with mechanics that have strong one-shot effects."
+}
