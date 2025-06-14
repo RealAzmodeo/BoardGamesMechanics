@@ -1,0 +1,77 @@
+{
+  "id": "auction_compensation",
+  "name": "Auction Compensation",
+  "bgg_url": "",
+  "description": "A feature in some auction mechanics where players who lose an auction or choose not to bid (or cannot bid further) receive some form of compensation. This can mitigate the 'all or nothing' feel of some auctions, keep players engaged even if they don't win the bid, or provide a consolation prize that can be useful. The compensation might be money, resources, or a minor action.",
+  "core_concepts": [
+    "Auction/Bidding",
+    "Loss mitigation",
+    "Consolation prize",
+    "Player engagement",
+    "Economic balance"
+  ],
+  "parameters": [
+    {
+      "name": "Trigger for Compensation",
+      "type": "string",
+      "description": "What triggers the compensation (e.g., being outbid, actively passing, dropping out of bidding, not winning the auction).",
+      "default_value": "Being outbid and dropping out"
+    },
+    {
+      "name": "Type of Compensation",
+      "type": "string/object",
+      "description": "What form does the compensation take (e.g., fixed amount of money, specific resource, a choice from several options, a weaker version of the auctioned item).",
+      "default_value": "Small amount of money"
+    },
+    {
+      "name": "Amount/Scale of Compensation",
+      "type": "string/integer",
+      "description": "Is the compensation fixed, or does it scale based on how high the bidding went, how many players bid, or other factors?",
+      "default_value": "Fixed amount"
+    },
+    {
+      "name": "Mandatory or Optional Compensation",
+      "type": "boolean",
+      "description": "Is the compensation automatically received, or must players choose to take it (perhaps foregoing other options)?",
+      "default_value": true
+    }
+  ],
+  "classification": "Economic / Auction Modifier",
+  "sub_classification": [
+    "Bidding Games",
+    "Consolation Mechanics"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "auction_bidding",
+      "relationship_type": "modifier_or_feature_of"
+    },
+    {
+      "mechanic_id": "catch_the_leader",
+      "relationship_type": "can_act_as_a_mild_catch-up_mechanism"
+    },
+    {
+      "mechanic_id": "increase_value_of_unchosen_resources",
+      "relationship_type": "similar_concept_of_making_passed_options_better"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Power Grid",
+      "specific_implementation_notes": "While not direct compensation for losing a bid on a power plant, the resource market adjusts prices based on demand, indirectly 'compensating' those who wait by potentially offering cheaper resources later if demand drops."
+    },
+    {
+      "game_name": "Princes of Florence",
+      "specific_implementation_notes": "Players bid for various items. If a player is outbid or passes, they might get a small amount of money or a 'Recruitment card' as compensation in some auction phases."
+    },
+    {
+      "game_name": "High Society",
+      "specific_implementation_notes": "In this 'reverse' auction (spending money to avoid negative points), players drop out. The last player remaining takes the negative card but others are 'compensated' by not taking it."
+    },
+    {
+      "game_name": "Medici",
+      "specific_implementation_notes": "Players bid to load goods onto their ships. If you don't win a lot, you don't pay, which is a form of compensation (not losing your bid money)."
+    }
+  ],
+  "notes_on_combination_modification": "Auction compensation helps to reduce player frustration in auction-heavy games, especially for those with less bidding power. The value of the compensation needs to be carefully balanced so it's helpful but doesn't negate the incentive to win auctions. It can be tied to the number of bids made or the value of the winning bid."
+}

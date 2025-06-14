@@ -1,0 +1,95 @@
+{
+  "id": "auction_bidding",
+  "name": "Auction / Bidding",
+  "bgg_url": "",
+  "description": "A mechanic where players compete to acquire items, resources, turn order, or other benefits by making offers (bids), typically of game currency or victory points. Various auction types exist (English, Dutch, sealed bid, etc.), each with different rules for how bids are made, revealed, and resolved. The highest bidder usually wins the item but pays their bid.",
+  "core_concepts": [
+    "Player valuation",
+    "Resource management (bidding currency)",
+    "Competition",
+    "Risk assessment",
+    "Price discovery"
+  ],
+  "parameters": [
+    {
+      "name": "Auction Type",
+      "type": "string",
+      "description": "The specific format of the auction (e.g., English/Open-outcry, Dutch, Sealed Bid, Vickrey, All-Pay). See specific sub-mechanic entries for details.",
+      "default_value": "English Auction"
+    },
+    {
+      "name": "Bid Currency",
+      "type": "string",
+      "description": "What players use to bid (e.g., game money, victory points, specific resources, action points).",
+      "default_value": "Game money"
+    },
+    {
+      "name": "Item(s) Being Auctioned",
+      "type": "string/array",
+      "description": "What is being auctioned (e.g., single item, multiple lots, turn order).",
+      "default_value": "Single item"
+    },
+    {
+      "name": "Resolution of Bids",
+      "type": "string",
+      "description": "How is the winner determined and what do they pay? What happens to losing bids/bidders?",
+      "default_value": "Highest bidder wins, pays their bid. Losers pay nothing."
+    },
+    {
+      "name": "Information Structure",
+      "type": "string",
+      "description": "Are bids public or secret? Are players' total resources known?",
+      "default_value": "Public bids, public resources"
+    }
+  ],
+  "classification": "Economic / Player Interaction",
+  "sub_classification": [
+    "Bidding Games",
+    "Resource Allocation"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "auction_english",
+      "relationship_type": "specific_type_of"
+    },
+    {
+      "mechanic_id": "auction_dutch",
+      "relationship_type": "specific_type_of"
+    },
+    {
+      "mechanic_id": "auction_sealed_bid",
+      "relationship_type": "specific_type_of"
+    },
+    {
+      "mechanic_id": "commodity_speculation",
+      "relationship_type": "auctions_can_be_used_to_set_prices"
+    },
+    {
+      "mechanic_id": "set_collection_001",
+      "relationship_type": "items_won_in_auctions_often_contribute_to_sets"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Power Grid",
+      "specific_implementation_notes": "Players bid for power plants in an English auction style. Also features a resource market that functions somewhat like a continuous auction."
+    },
+    {
+      "game_name": "Ra",
+      "specific_implementation_notes": "A classic auction game using a fixed set of bidding tiles (suns) in a type of open auction for lots of tiles."
+    },
+    {
+      "game_name": "Modern Art",
+      "specific_implementation_notes": "Features several different types of auctions (English, sealed, fixed price, once around) for paintings."
+    },
+    {
+      "game_name": "Keyflower",
+      "specific_implementation_notes": "Players use their worker meeples (of different colors) to bid on tiles for their village or to activate actions. This is a form of sealed bid auction where meeples are the currency."
+    },
+    {
+      "game_name": "Cyclades",
+      "specific_implementation_notes": "Players bid for the favor of gods, which grant different actions. This is an open, once-around bidding system."
+    }
+  ],
+  "notes_on_combination_modification": "Auction/Bidding is a highly interactive mechanic that tests players' ability to value items and read their opponents. The specific type of auction dramatically changes the feel and strategy. It can be the central mechanic or a sub-system for acquiring resources or advantages."
+}

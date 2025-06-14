@@ -1,0 +1,81 @@
+{
+  "id": "variable_phase_order",
+  "name": "Variable Phase Order",
+  "bgg_url": "",
+  "description": "A mechanic where the sequence of game phases or types of actions available in a round is not fixed but can change from round to round. This change might be determined by player choices (e.g., a rotating 'leader' player chooses the phase order), random draws, or conditions met in the game. It requires players to be adaptable and can significantly alter strategic considerations each round.",
+  "core_concepts": [
+    "Dynamic turn structure",
+    "Adaptability",
+    "Strategic planning for changing conditions",
+    "Player agency (if player-controlled)",
+    "Unpredictability (if random)"
+  ],
+  "parameters": [
+    {
+      "name": "Determination Method",
+      "type": "string",
+      "description": "How is the phase order for a round determined (e.g., player vote, role selection, card draw, dice roll, rotating chairman).",
+      "default_value": "Role selection by players in turn order"
+    },
+    {
+      "name": "Available Phases/Actions",
+      "type": "array/object",
+      "description": "The set of possible phases or action types that can be ordered (e.g., Income, Movement, Build, Combat).",
+      "default_value": ["Income", "Build", "Action"]
+    },
+    {
+      "name": "Impact of Order",
+      "type": "string",
+      "description": "How significantly does the order of phases affect gameplay and player strategies? Are there strong synergies or anti-synergies based on order?",
+      "default_value": "Significant impact, as earlier phases can enable or restrict options in later phases."
+    },
+    {
+      "name": "Frequency of Change",
+      "type": "string",
+      "description": "Does the phase order change every round, or less frequently based on specific triggers?",
+      "default_value": "Changes every round"
+    }
+  ],
+  "classification": "Game Flow / Turn Structure",
+  "sub_classification": [
+    "Dynamic Phases",
+    "Player-Controlled Turn Order"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "action_drafting",
+      "relationship_type": "drafting_roles_can_determine_phase_order"
+    },
+    {
+      "mechanic_id": "turn_order_role_order",
+      "relationship_type": "often_a_method_to_implement_variable_phase_order"
+    },
+    {
+      "mechanic_id": "events",
+      "relationship_type": "events_could_trigger_changes_in_phase_order"
+    },
+    {
+      "mechanic_id": "variable_player_powers",
+      "relationship_type": "some_powers_might_interact_with_or_influence_phase_order"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Puerto Rico",
+      "specific_implementation_notes": "Players select roles (phases) in turn order. The selected roles are executed for all players, but the selecting player gets a privilege. This effectively creates a variable phase order each round based on player choices."
+    },
+    {
+      "game_name": "Race for the Galaxy / San Juan",
+      "specific_implementation_notes": "Players simultaneously and secretly choose a phase they want to occur. All chosen phases happen, with bonuses for those who selected them. The set of active phases varies each round."
+    },
+    {
+      "game_name": "Twilight Imperium (Strategy Phase)",
+      "specific_implementation_notes": "Players choose strategy cards in turn order. The order in which these strategy cards are typically resolved (by initiative value on the card) defines a significant part of the round's flow."
+    },
+    {
+      "game_name": "Age of Steam / Steam",
+      "specific_implementation_notes": "Certain game actions are selected by players (like 'Engineer' or 'Urbanization') which then become available phases for the round, often in a player-determined or bid-for order."
+    }
+  ],
+  "notes_on_combination_modification": "Variable phase order adds a significant layer of strategic depth and replayability. Players must constantly evaluate which phases are most beneficial to occur early or late in a round, and how their opponents' choices will affect them. It can be complex to manage if there are too many possible phases or if the determination method is too chaotic."
+}

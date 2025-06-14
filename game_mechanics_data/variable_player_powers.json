@@ -1,0 +1,86 @@
+{
+  "id": "variable_player_powers",
+  "name": "Variable Player Powers",
+  "bgg_url": "",
+  "description": "A mechanic where each player, or the faction/role they control, starts with unique abilities, strengths, weaknesses, or different starting conditions that significantly distinguish their gameplay from others. These powers are typically fixed for the duration of the game and often guide a player's strategy.",
+  "core_concepts": [
+    "Asymmetry",
+    "Unique abilities",
+    "Strategic differentiation",
+    "Replayability (through playing different powers)",
+    "Faction identity"
+  ],
+  "parameters": [
+    {
+      "name": "Source of Powers",
+      "type": "string",
+      "description": "How are player powers determined (e.g., chosen from a pool, assigned randomly, tied to a specific faction/character selected by the player).",
+      "default_value": "Tied to a specific faction/character"
+    },
+    {
+      "name": "Nature of Powers",
+      "type": "string/object",
+      "description": "What aspects of the game do the powers affect (e.g., resource generation, movement, combat, scoring, special actions, rule exceptions).",
+      "default_value": "Grants a unique special action"
+    },
+    {
+      "name": "Symmetry vs. Asymmetry Level",
+      "type": "string",
+      "description": "How different are the powers? Are they minor variations or do they lead to completely different playstyles and objectives?",
+      "default_value": "Significant asymmetry leading to different playstyles"
+    },
+    {
+      "name": "Power Evolution",
+      "type": "string",
+      "description": "Can player powers change or be upgraded during the game, or are they static from the start?",
+      "default_value": "Static from the start"
+    }
+  ],
+  "classification": "Game Structure / Player Setup",
+  "sub_classification": [
+    "Asymmetric Abilities",
+    "Faction Powers",
+    "Character Abilities"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "variable_set_up",
+      "relationship_type": "often_combined_with_for_maximum_variability"
+    },
+    {
+      "mechanic_id": "deck_construction",
+      "relationship_type": "player_powers_can_influence_how_a_deck_is_built_or_used"
+    },
+    {
+      "mechanic_id": "role_playing",
+      "relationship_type": "strong_thematic_link_as_powers_define_a_role"
+    },
+    {
+      "mechanic_id": "tech_trees_tech_tracks",
+      "relationship_type": "player_powers_might_grant_unique_access_or_bonuses_on_tech_trees"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Cosmic Encounter",
+      "specific_implementation_notes": "The classic example; each alien race has a unique, often game-breaking, power that defines its playstyle."
+    },
+    {
+      "game_name": "Root",
+      "specific_implementation_notes": "Each faction plays an entirely different game with unique rules, actions, and victory conditions, driven by their variable powers."
+    },
+    {
+      "game_name": "Terra Mystica / Gaia Project",
+      "specific_implementation_notes": "Each faction has unique abilities, starting resources, and costs/benefits for certain actions, guiding their expansion and development."
+    },
+    {
+      "game_name": "Scythe",
+      "specific_implementation_notes": "Each faction has a unique faction ability and a different starting position and set of starting resources/popularity/power. Player mats also have slightly different action costs/benefits."
+    },
+    {
+      "game_name": "Gloomhaven",
+      "specific_implementation_notes": "Each character class has a unique deck of ability cards and perks, leading to very different tactical roles in combat scenarios."
+    }
+  ],
+  "notes_on_combination_modification": "Variable player powers greatly enhance replayability and allow players to explore different strategies. Balancing these asymmetric powers is a key design challenge. They can be as simple as a small starting bonus or as complex as entirely different rule sets for each player. Often tied temática a la facción o personaje que el jugador controla."
+}
