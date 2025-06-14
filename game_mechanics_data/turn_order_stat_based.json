@@ -1,0 +1,84 @@
+{
+  "id": "turn_order_stat_based",
+  "name": "Turn Order: Stat-Based",
+  "bgg_url": "",
+  "description": "A turn order mechanism where the sequence in which players take their turns in a round is determined by a specific player statistic or attribute. This statistic can be fixed (e.g., an initiative rating on a character card) or variable (e.g., current victory point total, a bid value from a previous phase, a track position). Players with 'better' values on this stat typically go earlier.",
+  "core_concepts": [
+    "Variable turn order",
+    "Attribute-based sequencing",
+    "Strategic importance of the determining stat",
+    "Potential for stat manipulation to influence turn order"
+  ],
+  "parameters": [
+    {
+      "name": "Determining Statistic",
+      "type": "string",
+      "description": "Which player statistic determines turn order (e.g., initiative, speed, agility, current score, bid amount, track position).",
+      "default_value": "Initiative rating"
+    },
+    {
+      "name": "Order Direction",
+      "type": "string",
+      "description": "Does a higher or lower value of the stat grant earlier turn order (e.g., highest initiative goes first, lowest score goes first).",
+      "default_value": "Highest value goes first"
+    },
+    {
+      "name": "Tie-breaking Rule",
+      "type": "string",
+      "description": "How are ties in the determining statistic resolved for turn order (e.g., previous turn order, another secondary stat, fixed player token, random).",
+      "default_value": "Fixed player token (e.g., player 1 breaks ties)"
+    },
+    {
+      "name": "Frequency of Re-evaluation",
+      "type": "string",
+      "description": "When is the turn order re-evaluated based on the stat (e.g., beginning of each round, after specific events, continuously if the stat is highly dynamic).",
+      "default_value": "Beginning of each round"
+    }
+  ],
+  "classification": "Turn Structure / Game Flow",
+  "sub_classification": [
+    "Initiative Systems",
+    "Attribute-Driven Order"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "variable_player_powers",
+      "relationship_type": "player_powers_often_include_or_affect_the_determining_stat"
+    },
+    {
+      "mechanic_id": "auction_bidding",
+      "relationship_type": "bids_can_be_the_stat_determining_turn_order"
+    },
+    {
+      "mechanic_id": "turn_order_progressive",
+      "relationship_type": "contrasting_fixed_order_system"
+    },
+    {
+      "mechanic_id": "stat_check_resolution",
+      "relationship_type": "stats_used_for_turn_order_might_also_be_used_in_checks"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Gloomhaven",
+      "specific_implementation_notes": "Players choose two cards each round; the initiative value on one of the cards determines their turn order from lowest to highest."
+    },
+    {
+      "game_name": "Scythe",
+      "specific_implementation_notes": "While the overall turn order is fixed, some player mats or abilities might allow a player to gain a temporary advantage or go first in specific situations based on faction abilities or upgrades, which can be seen as a micro-application."
+    },
+    {
+      "game_name": "Terraforming Mars",
+      "specific_implementation_notes": "The first player token rotates, but turn order for placing the first ocean, or for certain end-game bonuses, can be influenced by who achieved certain milestones or funded awards first (a form of stat/achievement)."
+    },
+    {
+      "game_name": "Eclipse: Second Dawn for the Galaxy",
+      "specific_implementation_notes": "Initiative values on ship parts and technologies determine the order of combat actions between ships."
+    },
+    {
+      "game_name": "Summoner Wars",
+      "specific_implementation_notes": "Units often have initiative or speed stats that determine activation order or who attacks first in a conflict."
+    }
+  ],
+  "notes_on_combination_modification": "Stat-based turn order ties player actions or attributes directly to their ability to act sooner or later. This can create interesting choices if the stat used for turn order also has other game effects (e.g., bidding for turn order means spending resources needed elsewhere). It's crucial to make the determining stat relevant and potentially manipulable by players for strategic depth."
+}

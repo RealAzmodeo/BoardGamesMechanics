@@ -1,0 +1,81 @@
+{
+  "id": "auction_dexterity",
+  "name": "Auction: Dexterity",
+  "bgg_url": "",
+  "description": "A type of auction where the bidding process or the determination of the winner involves a physical skill or dexterity challenge. Instead of (or in addition to) bidding money, players might perform a task like flicking a disc, dropping a token, or balancing components. The success, accuracy, or outcome of this dexterity test determines who wins the auction or the price paid.",
+  "core_concepts": [
+    "Auction/Bidding",
+    "Dexterity",
+    "Physical skill",
+    "Performance-based bidding",
+    "Novelty auction"
+  ],
+  "parameters": [
+    {
+      "name": "Dexterity Challenge Type",
+      "type": "string",
+      "description": "The specific physical task involved (e.g., flicking, dropping, stacking, aiming, speed-based collection).",
+      "default_value": "Flicking a disc towards a target"
+    },
+    {
+      "name": "Role of Dexterity in Bidding",
+      "type": "string",
+      "description": "How does the dexterity challenge integrate with bidding (e.g., dexterity outcome IS the bid, dexterity determines turn order for bidding, dexterity is a tie-breaker, dexterity skill allows access to better bids).",
+      "default_value": "Dexterity outcome determines the winner directly (e.g., closest to target)"
+    },
+    {
+      "name": "Success/Failure Conditions",
+      "type": "string",
+      "description": "What defines success or failure in the dexterity challenge, and how does it translate to auction results?",
+      "default_value": "Specific target zones or scoring thresholds"
+    },
+    {
+      "name": "Use of Game Currency",
+      "type": "string",
+      "description": "Is traditional game currency also involved, or is it purely dexterity-based? (e.g., pay to attempt the dexterity challenge, bid money then perform challenge to confirm).",
+      "default_value": "Purely dexterity-based"
+    }
+  ],
+  "classification": "Auction / Dexterity",
+  "sub_classification": [
+    "Physical Challenge Bidding",
+    "Action Auction"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "auction_bidding",
+      "relationship_type": "specific_variant_of"
+    },
+    {
+      "mechanic_id": "flicking",
+      "relationship_type": "common_dexterity_element_used"
+    },
+    {
+      "mechanic_id": "stacking_and_balancing",
+      "relationship_type": "common_dexterity_element_used"
+    },
+    {
+      "mechanic_id": "real_time",
+      "relationship_type": "dexterity_auctions_can_be_timed"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Tumblin-Dice",
+      "specific_implementation_notes": "While not strictly an auction for an item, players 'bid' by rolling dice down a stepped surface, and points are scored based on where they land. The 'bid' is the skillful roll."
+    },
+    {
+      "game_name": "Riff Raff",
+      "specific_implementation_notes": "Players try to balance items on a rocking ship. The 'bidding' is the attempt to place an item successfully; failure might penalize the player or benefit others."
+    },
+    {
+      "game_name": "PitchCar / Carabande",
+      "specific_implementation_notes": "Turn order (a valuable commodity) is determined by who is furthest along the track, achieved by skillful disc flicking. Not a direct auction, but competitive flicking for position."
+    },
+    {
+      "game_name": "Elk Fest",
+      "specific_implementation_notes": "Players flick wooden elk pieces across a river; success and positioning could be framed as a dexterity 'bid' for control or points."
+    }
+  ],
+  "notes_on_combination_modification": "Dexterity auctions are less common but can be very engaging and fun, adding a physical element to the typically mental exercise of bidding. They often level the playing field if some players are less skilled at traditional valuation. The challenge must be well-tuned to be neither too easy nor too frustrating. Can be a main event or a mini-game within a larger economic game."
+}

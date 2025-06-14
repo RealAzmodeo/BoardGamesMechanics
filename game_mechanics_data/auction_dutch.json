@@ -1,0 +1,87 @@
+{
+  "id": "auction_dutch",
+  "name": "Auction: Dutch",
+  "bgg_url": "",
+  "description": "A type of auction where the auctioneer starts with a high asking price for an item, which is progressively lowered. The first player to accept the current price wins the item and pays that price. If no one accepts the price before it reaches a minimum (or zero), the item may go unsold or be resolved in another way. This creates tension as players wait for the price to drop, risking another player accepting it first.",
+  "core_concepts": [
+    "Auction/Bidding",
+    "Descending price",
+    "Risk assessment (waiting vs. claiming)",
+    "Player timing",
+    "Single bid wins"
+  ],
+  "parameters": [
+    {
+      "name": "Starting Price",
+      "type": "integer",
+      "description": "The initial high price at which the item is offered.",
+      "default_value": 100
+    },
+    {
+      "name": "Price Decrement",
+      "type": "integer/string",
+      "description": "How much the price drops at each step or interval (e.g., by 5 units, by a percentage, continuously).",
+      "default_value": 5
+    },
+    {
+      "name": "Minimum Price / Reserve",
+      "type": "integer",
+      "description": "The lowest price the auctioneer will accept. If it reaches this without a bid, the item may be withdrawn.",
+      "default_value": 0
+    },
+    {
+      "name": "Bidding Signal",
+      "type": "string",
+      "description": "How players indicate they accept the current price (e.g., shouting 'mine', pressing a button, raising a paddle).",
+      "default_value": "Shouting/signaling"
+    },
+    {
+      "name": "Resolution on Multiple Claims",
+      "type": "string",
+      "description": "If multiple players claim at the exact same price (rare in board games, more for real-world), how is it resolved?",
+      "default_value": "Typically, game rules ensure only one can claim per price step."
+    }
+  ],
+  "classification": "Economic / Auction",
+  "sub_classification": [
+    "Descending Price Auction",
+    "High-Tension Bidding"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "auction_bidding",
+      "relationship_type": "specific_type_of"
+    },
+    {
+      "mechanic_id": "auction_english",
+      "relationship_type": "contrasting_auction_type_ascending_price"
+    },
+    {
+      "mechanic_id": "push_your_luck",
+      "relationship_type": "waiting_for_lower_price_has_a_push_your_luck_feel"
+    },
+    {
+      "mechanic_id": "real_time",
+      "relationship_type": "can_be_implemented_in_real_time_for_faster_price_drops"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "No Thanks!",
+      "specific_implementation_notes": "While not a traditional auction for an item, players try to avoid taking a card with negative points. Each turn, they can pay a chip to pass or take the card and all chips on it. If they pass, the 'price' (number of chips to gain) for the next player effectively increases for taking the card. The decision to take the card before the pile of chips becomes too tempting is similar to a Dutch auction's 'jump in' moment."
+    },
+    {
+      "game_name": "Medici (for determining first player/loading order in some variants)",
+      "specific_implementation_notes": "Some variants or similar games use a Dutch auction for turn order or priority."
+    },
+    {
+      "game_name": "For Sale (second phase)",
+      "specific_implementation_notes": "In the second phase, players simultaneously reveal money cards to bid on property value cards. The highest value property card goes to the highest bidder, then the next highest to the next, etc. This isn't a pure Dutch auction, but the pressure to bid enough without overpaying for a diminishing set of options has a related feel if one considers the 'price' of not getting the best item as increasing."
+    },
+    {
+      "game_name": "The Estates",
+      "specific_implementation_notes": "Players bid for building pieces. The auctioneer (current player) offers a piece and can lower the price if no one bids. If it drops to zero, the auctioneer *must* take it for free. This is a modified Dutch auction."
+    }
+  ],
+  "notes_on_combination_modification": "Dutch auctions are known for creating a specific kind of tension. They are quick once a bid is made. The key is setting the starting price and decrement rate appropriately for the game's economy. They can be used for valuable items or for undesirable items (where the 'bid' is to avoid taking it and the price paid is a penalty that decreases)."
+}

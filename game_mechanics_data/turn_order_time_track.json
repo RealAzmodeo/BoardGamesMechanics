@@ -1,0 +1,81 @@
+{
+  "id": "turn_order_time_track",
+  "name": "Turn Order: Time Track",
+  "bgg_url": "",
+  "description": "A turn order mechanism where players' actions cost a certain amount of 'time'. When a player takes an action, their marker advances on a time track by the amount of time spent. The player whose marker is furthest behind on the time track is generally the next player to take a turn. This allows for multiple actions by one player if they take short actions, while longer actions push their marker further ahead, delaying their next turn.",
+  "core_concepts": [
+    "Variable turn order",
+    "Action cost (time)",
+    "Strategic timing",
+    "Catch-up mechanic (for player furthest behind)",
+    "Player agency in turn frequency"
+  ],
+  "parameters": [
+    {
+      "name": "Time Cost of Actions",
+      "type": "integer/object",
+      "description": "How much 'time' each available action costs. Can be fixed per action type or variable.",
+      "default_value": "{'short_action': 1, 'long_action': 3}"
+    },
+    {
+      "name": "Track Length / Reset",
+      "type": "integer/string",
+      "description": "Is the time track finite? Does it loop or reset? What happens when markers reach the end?",
+      "default_value": "Finite track, may trigger end of round or game"
+    },
+    {
+      "name": "Tie-breaking on Track",
+      "type": "string",
+      "description": "If multiple player markers are on the same time space, who goes next (e.g., player who arrived last, fixed tie-breaker token, player on top of a stack).",
+      "default_value": "Player who arrived last on the space (or is on top if stacked)"
+    },
+    {
+      "name": "Bonus Spaces/Events on Track",
+      "type": "string",
+      "description": "Are there specific spaces on the time track that grant bonuses, trigger events, or provide income when landed on or passed?",
+      "default_value": "Some spaces grant small bonuses"
+    }
+  ],
+  "classification": "Turn Structure / Game Flow",
+  "sub_classification": [
+    "Time-Based Turn Order",
+    "Action Point Allowance (variant)"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "action_points",
+      "relationship_type": "time_costs_are_analogous_to_variable_action_point_costs"
+    },
+    {
+      "mechanic_id": "rondel",
+      "relationship_type": "both_involve_moving_on_a_track_to_select_actions_or_determine_turns"
+    },
+    {
+      "mechanic_id": "turn_order_progressive",
+      "relationship_type": "contrasting_mechanism_with_more_fixed_order"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Patchwork",
+      "specific_implementation_notes": "Players move on a central time board. The player furthest behind always takes the next turn. Moving to get a patch costs time shown on the board."
+    },
+    {
+      "game_name": "Tokaido",
+      "specific_implementation_notes": "Players move along a linear track. The player furthest behind on the track takes the next turn, moving to any open action space ahead of them."
+    },
+    {
+      "game_name": "Glen More / Glen More II: Chronicles",
+      "specific_implementation_notes": "Players move their marker around a track of tiles. The player furthest behind takes the next turn, choosing a tile ahead of their marker. The distance moved determines how many tiles are 'passed over' and removed."
+    },
+    {
+      "game_name": "Thebes",
+      "specific_implementation_notes": "Players spend weeks (time) to travel and excavate. The player who has spent the least amount of time overall takes the next turn."
+    },
+    {
+      "game_name": "Heaven & Ale",
+      "specific_implementation_notes": "Players move around a central board, and actions/resources cost varying amounts of 'time' (movement on a score track that also acts as a time track). The player furthest behind on this track typically plays next."
+    }
+  ],
+  "notes_on_combination_modification": "Time track turn order creates interesting dilemmas about taking multiple small turns versus a single powerful but time-consuming turn. It can be self-balancing as players who fall behind get more turns. The 'cost' of time for actions is the critical tuning knob for this mechanic."
+}
