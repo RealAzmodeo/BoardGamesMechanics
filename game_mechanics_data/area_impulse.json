@@ -1,0 +1,81 @@
+{
+  "id": "area_impulse",
+  "name": "Area-Impulse",
+  "bgg_url": "",
+  "description": "A mechanic, often found in wargames, where play proceeds in a series of impulses or sub-phases. During each impulse, players might activate a limited number of units or groups of units within a specific area or across the board. The impulse system continues until all players pass consecutively or a certain number of impulses are completed, often signifying the end of a larger turn or round. This creates a back-and-forth flow and requires careful decisions about activation order and tempo.",
+  "core_concepts": [
+    "Phased activation",
+    "Action tempo",
+    "Activation order",
+    "Operational initiative",
+    "Back-and-forth play"
+  ],
+  "parameters": [
+    {
+      "name": "Number of Activations per Impulse",
+      "type": "integer/string",
+      "description": "How many units or groups can a player activate when it's their turn within an impulse (e.g., one unit, one stack, units in one area).",
+      "default_value": "One unit or stack"
+    },
+    {
+      "name": "Impulse Ending Condition",
+      "type": "string",
+      "description": "What causes the series of impulses to end for the current round/turn (e.g., all players pass, fixed number of impulses, specific event).",
+      "default_value": "All players pass consecutively"
+    },
+    {
+      "name": "Passing Rules",
+      "type": "string",
+      "description": "Can players pass their turn in an impulse? Does passing prevent further action in the larger round, or only in the current series of impulses?",
+      "default_value": "Passing means no more activations in the current impulse series"
+    },
+    {
+      "name": "Initiative System",
+      "type": "string",
+      "description": "How is turn order determined within each impulse, or for the start of a new impulse series?",
+      "default_value": "Alternating turns, fixed start player per round"
+    }
+  ],
+  "classification": "Game Flow / Turn Structure",
+  "sub_classification": [
+    "Wargame Specific",
+    "Activation Systems"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "action_points",
+      "relationship_type": "impulse_activations_can_be_a_form_of_action_budgeting"
+    },
+    {
+      "mechanic_id": "turn_order_progressive",
+      "relationship_type": "can_be_used_to_determine_who_acts_in_impulses"
+    },
+    {
+      "mechanic_id": "command_cards",
+      "relationship_type": "cards_might_dictate_number_of_impulses_or_activations"
+    },
+    {
+      "mechanic_id": "area_movement",
+      "relationship_type": "units_activated_via_impulses_often_use_area_movement"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Storm Over Arnhem / Storm Over Stalingrad (Series)",
+      "specific_implementation_notes": "Classic examples of the area-impulse system. Players activate formations in impulses until both pass."
+    },
+    {
+      "game_name": "Fields of Fire (Series)",
+      "specific_implementation_notes": "A card-driven company-level wargame that uses a complex impulse and command system to manage unit actions."
+    },
+    {
+      "game_name": "OCS (Operational Combat Series by MMP)",
+      "specific_implementation_notes": "Uses a highly detailed impulse system for operational scale combat, involving supply, weather, and complex unit interactions."
+    },
+    {
+      "game_name": "Here I Stand / Virgin Queen",
+      "specific_implementation_notes": "While card-driven, the action rounds have an impulse-like feel as players play cards for operations or events, reacting to each other in a sequence until cards run out or players pass."
+    }
+  ],
+  "notes_on_combination_modification": "Area-impulse systems allow for a granular yet manageable control over large numbers of units by breaking down a turn into smaller decision points. It emphasizes the importance of timing and reacting to opponent's moves. The complexity can vary greatly, from simple 'I go, you go' impulses to intricate systems with varied activation capabilities."
+}

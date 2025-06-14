@@ -1,0 +1,86 @@
+{
+  "id": "variable_set_up",
+  "name": "Variable Set-up",
+  "bgg_url": "",
+  "description": "A mechanic where the initial state of the game (board configuration, starting resources, player positions, available goals, etc.) changes from one play to the next. This can be achieved through random draws of tiles or cards, player choices during a pre-game phase, or scenario-specific instructions. It aims to increase replayability by ensuring each game starts differently.",
+  "core_concepts": [
+    "Replayability",
+    "Asymmetric start (sometimes)",
+    "Adaptability",
+    "Discovery",
+    "Varied initial conditions"
+  ],
+  "parameters": [
+    {
+      "name": "Method of Variation",
+      "type": "string",
+      "description": "How is variability introduced during setup (e.g., random tile draw, card drafting, scenario book, player choices from options, modular board assembly).",
+      "default_value": "Random tile draw for map layout"
+    },
+    {
+      "name": "Scope of Variation",
+      "type": "string",
+      "description": "Which game elements are variable (e.g., map layout, starting resources, player powers, available goals, initial unit placement).",
+      "default_value": "Map layout and starting resources"
+    },
+    {
+      "name": "Degree of Randomness vs. Choice",
+      "type": "string",
+      "description": "Is the setup purely random, purely player-driven, or a mix (e.g., players draft from a random pool)?",
+      "default_value": "Mix of random draw and player choice"
+    },
+    {
+      "name": "Impact on Strategy",
+      "type": "string",
+      "description": "How significantly does the variable setup affect initial strategies and game arc?",
+      "default_value": "Significant impact, requires adapting strategy each game"
+    }
+  ],
+  "classification": "Game Structure / Replayability",
+  "sub_classification": [
+    "Modular Board",
+    "Randomized Initial Conditions",
+    "Scenario-based Setup"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "modular_board",
+      "relationship_type": "common_method_for_variable_set_up"
+    },
+    {
+      "mechanic_id": "variable_player_powers",
+      "relationship_type": "often_combined_with_to_increase_asymmetry"
+    },
+    {
+      "mechanic_id": "scenario_mission_campaign_game",
+      "relationship_type": "scenarios_inherently_provide_variable_set_up"
+    },
+    {
+      "mechanic_id": "drafting",
+      "relationship_type": "can_be_used_during_setup_for_resources_powers_or_goals"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Catan (Settlers of Catan)",
+      "specific_implementation_notes": "Hexagonal board tiles (resources, numbers) are laid out randomly or semi-randomly each game, creating a different resource distribution."
+    },
+    {
+      "game_name": "Terraforming Mars",
+      "specific_implementation_notes": "Players start with different corporations (variable player powers) and initial hands of project cards, leading to varied starting strategies. Map milestones/awards can also vary."
+    },
+    {
+      "game_name": "Gloomhaven",
+      "specific_implementation_notes": "Each scenario has a unique map layout, monster set, and objectives, defined by the scenario book."
+    },
+    {
+      "game_name": "Twilight Imperium",
+      "specific_implementation_notes": "The galaxy map is built by players choosing and placing system tiles, leading to a unique board configuration each game. Public objectives are also drawn randomly."
+    },
+    {
+      "game_name": "Mage Knight Board Game",
+      "specific_implementation_notes": "Map tiles are revealed as players explore, creating a variable board. Scenarios also dictate specific setup rules and goals."
+    }
+  ],
+  "notes_on_combination_modification": "Variable set-up is a powerful tool for enhancing replay value and challenging players to adapt. The key is to ensure that variations remain balanced and interesting, rather than creating overly swingy or unfair starting positions. It can range from minor tweaks to entirely different game experiences each play."
+}
