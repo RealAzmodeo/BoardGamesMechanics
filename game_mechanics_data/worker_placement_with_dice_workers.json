@@ -1,0 +1,85 @@
+{
+  "id": "worker_placement_with_dice_workers",
+  "name": "Worker Placement with Dice Workers",
+  "bgg_url": "",
+  "description": "A variation of Worker Placement where the 'workers' are dice. The value shown on the die face (the pip value) often determines the strength, type, or specific options available for the action taken when the die is placed. This adds an element of randomness and dice management (rolling, manipulation) to the standard worker placement formula.",
+  "core_concepts": [
+    "Worker placement",
+    "Dice rolling",
+    "Dice manipulation",
+    "Action strength/options tied to die value",
+    "Resource management (dice as workers with variable properties)"
+  ],
+  "parameters": [
+    {
+      "name": "Die Value Significance",
+      "type": "string",
+      "description": "How does the die's pip value affect the action (e.g., higher value is stronger action, specific values unlock specific actions, value determines quantity of resources gained).",
+      "default_value": "Higher value is stronger action"
+    },
+    {
+      "name": "Dice Acquisition/Rolling",
+      "type": "string",
+      "description": "How are dice workers obtained and rolled (e.g., roll a pool at start of round, draft rolled dice, fixed number rolled each turn).",
+      "default_value": "Roll a pool at start of round"
+    },
+    {
+      "name": "Dice Manipulation Options",
+      "type": "string",
+      "description": "Can players alter the die faces after rolling (e.g., spend resources to +/- pips, use abilities to flip dice, re-roll specific dice)?",
+      "default_value": "Limited options to modify pips"
+    },
+    {
+      "name": "Action Space Requirements for Dice",
+      "type": "string",
+      "description": "Do action spaces have restrictions based on die values (e.g., 'requires a 6', 'only even numbers', 'value must be >= X')?",
+      "default_value": "Some spaces require minimum die values"
+    }
+  ],
+  "classification": "Worker Placement / Dice",
+  "sub_classification": [
+    "Dice as Workers",
+    "Action Value by Dice"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "worker_placement",
+      "relationship_type": "specific_variant_of"
+    },
+    {
+      "mechanic_id": "dice_rolling",
+      "relationship_type": "core_component_of"
+    },
+    {
+      "mechanic_id": "re_rolling_and_locking",
+      "relationship_type": "often_used_for_dice_manipulation"
+    },
+    {
+      "mechanic_id": "worker_placement_different_worker_types",
+      "relationship_type": "dice_pips_can_simulate_different_strengths_or_types"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "The Voyages of Marco Polo",
+      "specific_implementation_notes": "Players roll their dice (workers) at the start of the round. Placing a die on an action space costs money if other dice are present, and higher value dice are often better or required for certain actions."
+    },
+    {
+      "game_name": "Alien Frontiers",
+      "specific_implementation_notes": "Players roll dice (ships) and place them on orbital locations to activate abilities, often requiring specific sets or sums of dice."
+    },
+    {
+      "game_name": "Kingsburg",
+      "specific_implementation_notes": "Players roll dice and then use the sum of subsets of these dice to influence advisors (action spaces) to gain resources or benefits."
+    },
+    {
+      "game_name": "Euphoria: Build a Better Dystopia",
+      "specific_implementation_notes": "Workers are dice. Rolling them generates their value. Higher values are generally better but risk making the worker 'aware,' which can trigger negative game consequences."
+    },
+    {
+      "game_name": "Lorenzo il Magnifico",
+      "specific_implementation_notes": "Players have family members (workers) whose strength is determined by dice rolled for all players each round. These workers are then placed to take actions, with strength often determining the power of the action or access to certain spaces."
+    }
+  ],
+  "notes_on_combination_modification": "This mechanic blends the strategic planning of worker placement with the tactical adaptability required by dice outcomes. Provides interesting decisions around whether to use a die for a suboptimal action now or save it, and how to mitigate bad rolls. The level of dice manipulation allowed greatly affects the randomness."
+}

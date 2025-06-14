@@ -1,0 +1,84 @@
+{
+  "id": "area_movement",
+  "name": "Area Movement",
+  "bgg_url": "",
+  "description": "A mechanic where the game board is divided into distinct areas or regions, and player pieces move from one adjacent area to another. Unlike grid movement, the exact positioning within an area is usually not important; only which area a piece occupies. Movement between areas often has costs, requires specific conditions (e.g., control of an area), or is limited by connections between areas.",
+  "core_concepts": [
+    "Abstracted movement",
+    "Connectivity",
+    "Territory control",
+    "Strategic positioning between regions"
+  ],
+  "parameters": [
+    {
+      "name": "Adjacency Rules",
+      "type": "string/map",
+      "description": "How are areas connected? Are all bordering areas adjacent, or are there specific paths/links (e.g., sea lanes, mountain passes)?",
+      "default_value": "All physically bordering areas are adjacent"
+    },
+    {
+      "name": "Movement Cost/Restrictions",
+      "type": "string/integer",
+      "description": "Does it cost action points, movement points, or resources to move between areas? Are there restrictions like needing to control an area to move through it, or terrain effects?",
+      "default_value": "1 movement point per area"
+    },
+    {
+      "name": "Unit Capacity per Area",
+      "type": "integer/string",
+      "description": "Is there a limit to how many units (friendly or total) can occupy a single area (stacking limit)?",
+      "default_value": "Unlimited"
+    },
+    {
+      "name": "Board Structure",
+      "type": "string",
+      "description": "Is the map fixed, modular, or dynamically created? Are area boundaries clear?",
+      "default_value": "Fixed map with clear boundaries"
+    }
+  ],
+  "classification": "Movement",
+  "sub_classification": [
+    "Region-to-Region Movement",
+    "Abstracted Positioning"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "point_to_point_movement",
+      "relationship_type": "similar_abstracted_movement_but_areas_are_nodes"
+    },
+    {
+      "mechanic_id": "grid_movement",
+      "relationship_type": "alternative_more_granular_movement_system"
+    },
+    {
+      "mechanic_id": "area_majority_influence",
+      "relationship_type": "movement_is_key_to_establishing_majority"
+    },
+    {
+      "mechanic_id": "network_and_route_building",
+      "relationship_type": "can_define_adjacencies_or_paths_for_area_movement"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Risk",
+      "specific_implementation_notes": "Classic example; units move from one territory to an adjacent one."
+    },
+    {
+      "game_name": "Small World",
+      "specific_implementation_notes": "Players move their race tokens between distinct regions on the map."
+    },
+    {
+      "game_name": "War of the Ring",
+      "specific_implementation_notes": "Armies move between regions on a map of Middle-earth, with connections clearly defined."
+    },
+    {
+      "game_name": "Axis & Allies",
+      "specific_implementation_notes": "Land units move between territories, sea units between sea zones."
+    },
+    {
+      "game_name": "Twilight Imperium",
+      "specific_implementation_notes": "Ships move between distinct planetary systems or empty space sectors on a modular hex grid that represents areas."
+    }
+  ],
+  "notes_on_combination_modification": "Area movement is fundamental to many strategic board games, especially those involving conflict or territory control. It simplifies map representation compared to grid movement. Variations can include different movement capabilities for different units, the impact of terrain types within areas, or the strategic importance of choke points (areas with limited connections)."
+}
