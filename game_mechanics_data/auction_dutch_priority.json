@@ -1,0 +1,79 @@
+{
+  "id": "auction_dutch_priority",
+  "name": "Auction: Dutch Priority",
+  "bgg_url": "",
+  "description": "A variation of the Dutch Auction where, instead of the first player to accept the descending price winning, multiple players might signal their interest at a certain price level. Priority to win the item at that price is then given to one of these players based on a pre-determined factor, often turn order or a specific priority token. If that player declines, the next in priority may get the chance.",
+  "core_concepts": [
+    "Auction/Bidding",
+    "Dutch Auction variant",
+    "Descending price",
+    "Priority system",
+    "Player timing with priority consideration"
+  ],
+  "parameters": [
+    {
+      "name": "Starting Price",
+      "type": "integer",
+      "description": "The initial high price at which the item is offered.",
+      "default_value": 100
+    },
+    {
+      "name": "Price Decrement",
+      "type": "integer/string",
+      "description": "How much the price drops at each step or interval.",
+      "default_value": 5
+    },
+    {
+      "name": "Priority Determinant",
+      "type": "string",
+      "description": "How priority is determined among players bidding at the same price level (e.g., current turn order, specific priority marker, clockwise from auctioneer).",
+      "default_value": "Current turn order"
+    },
+    {
+      "name": "Claiming Window",
+      "type": "string",
+      "description": "Is there a specific moment or phase when players indicate their interest, or can they jump in as the price drops?",
+      "default_value": "Players indicate interest as price drops; priority resolves ties at a price level."
+    },
+    {
+      "name": "Consequence of Declining (for priority player)",
+      "type": "string",
+      "description": "If the player with priority at a price level declines, what happens? (e.g., item offered to next in priority, auction continues downwards, player is out of this auction).",
+      "default_value": "Item offered to next player in priority at that price."
+    }
+  ],
+  "classification": "Economic / Auction",
+  "sub_classification": [
+    "Descending Price Auction",
+    "Priority Bidding"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "auction_dutch",
+      "relationship_type": "variant_of"
+    },
+    {
+      "mechanic_id": "turn_order_progressive",
+      "relationship_type": "turn_order_can_be_the_priority_determinant"
+    },
+    {
+      "mechanic_id": "passed_action_token",
+      "relationship_type": "a_priority_token_could_function_similarly"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Power Grid (Power Plant Market)",
+      "specific_implementation_notes": "While the main auction is English, the concept of a 'Dutch Priority' can be seen if one considers the order of choosing plants from the fixed market if multiple players could afford the same one and it's the 'cheapest' desirable option for them. The player earliest in turn order would get first pick, effectively having priority at that 'price'."
+    },
+    {
+      "game_name": "Medici",
+      "specific_implementation_notes": "Players load goods onto their ships. When a player declares a ship full or passes, other players in turn order have a chance to load one more good if they can. This priority to act based on turn order within a phase has similarities."
+    },
+    {
+      "game_name": "The Speicherstadt (Kramer & Kiesling)",
+      "specific_implementation_notes": "Players place workers above cards they want. When a card is auctioned, the price starts high and drops. The first worker in line (highest position) gets the first chance to buy at the current price. If they pass, the price might drop further for the next worker in line. This is a strong example."
+    }
+  ],
+  "notes_on_combination_modification": "Dutch Priority auctions add a layer of positional strategy to the standard Dutch auction. Knowing your priority relative to others can influence when you decide to signal interest. It prevents pure speed from always winning, allowing more tactical considerations based on the priority system."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "turn_order_role_order",
+  "name": "Turn Order: Role Order",
+  "bgg_url": "",
+  "description": "A turn order mechanism where the sequence of play is determined by players selecting or being assigned specific roles, each of which has an associated order or initiative. Once roles are chosen/assigned for a round, players take their turns or perform actions according to the sequence of these roles, rather than a fixed player order. This often means a player might act multiple times in a round if they secure multiple roles, or their position in the turn sequence can vary greatly.",
+  "core_concepts": [
+    "Variable turn order",
+    "Role selection",
+    "Phase-based execution (often)",
+    "Strategic role choice impacting turn timing"
+  ],
+  "parameters": [
+    {
+      "name": "Role Selection Method",
+      "type": "string",
+      "description": "How are roles chosen or assigned each round (e.g., players draft roles, roles are auctioned, roles rotate, each player secretly chooses a role).",
+      "default_value": "Players draft roles in player order"
+    },
+    {
+      "name": "Number of Roles / Actions per Role",
+      "type": "string",
+      "description": "How many roles are available? Does each role grant a single turn/action or a set of actions?",
+      "default_value": "Fixed number of roles, each grants a specific action/phase"
+    },
+    {
+      "name": "Role Initiative/Order",
+      "type": "string/integer",
+      "description": "Is there a fixed initiative order for the roles themselves, or is the order determined by selection sequence?",
+      "default_value": "Roles have a fixed initiative value determining their execution order."
+    },
+    {
+      "name": "Exclusivity of Roles",
+      "type": "boolean",
+      "description": "Can a role be chosen by only one player per round, or can multiple players choose the same role (perhaps with different benefits)?",
+      "default_value": true
+    }
+  ],
+  "classification": "Turn Structure / Game Flow",
+  "sub_classification": [
+    "Role Selection",
+    "Phase Order Determination"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "variable_phase_order",
+      "relationship_type": "role_order_is_a_common_way_to_implement_this"
+    },
+    {
+      "mechanic_id": "action_drafting",
+      "relationship_type": "selecting_roles_is_a_form_of_action_drafting"
+    },
+    {
+      "mechanic_id": "variable_player_powers",
+      "relationship_type": "player_powers_might_give_advantages_in_role_selection_or_execution"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Puerto Rico",
+      "specific_implementation_notes": "Players select a role (Governor, Settler, Mayor, etc.) in turn. The chosen roles are then executed in a fixed order for all players, with the selecting player getting a privilege for their chosen role."
+    },
+    {
+      "game_name": "Race for the Galaxy / San Juan",
+      "specific_implementation_notes": "Players simultaneously choose a role/action for the round. All chosen roles are executed, typically in a predefined sequence, with players who chose a role getting a bonus."
+    },
+    {
+      "game_name": "Citadels",
+      "specific_implementation_notes": "Players draft character roles each round. The roles are then called in their numerical order, and the player who chose that role takes their turn, performing the role's special action."
+    },
+    {
+      "game_name": "Twilight Imperium (Strategy Phase)",
+      "specific_implementation_notes": "Players select Strategy Cards (roles). These cards have an initiative value, and players execute the primary ability of their card in initiative order. Other players may then execute the secondary ability."
+    }
+  ],
+  "notes_on_combination_modification": "Role Order turn systems create dynamic gameplay where players must anticipate which roles will be chosen and when they will get to act. The choice of role often involves balancing the desire for a powerful action with the timing of that action within the round. The number of roles, their powers, and the selection process are key design levers."
+}
