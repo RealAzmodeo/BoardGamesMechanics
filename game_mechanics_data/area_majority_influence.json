@@ -1,0 +1,91 @@
+{
+  "id": "area_majority_influence",
+  "name": "Area Majority / Influence",
+  "bgg_url": "",
+  "description": "A mechanic where players compete to have the most pieces (units, tokens, control markers) in specific areas or regions of the game board. At certain scoring times or at the end of the game, the player(s) with the majority (or sometimes second majority, etc.) in an area earn victory points, resources, or other benefits. Influence can be a more abstract form of control not necessarily requiring pieces but tracked in other ways.",
+  "core_concepts": [
+    "Area control",
+    "Competition for presence",
+    "Scoring based on relative strength",
+    "Territory control (often)",
+    "Strategic placement"
+  ],
+  "parameters": [
+    {
+      "name": "Scoring Condition",
+      "type": "string",
+      "description": "When is area majority scored (e.g., end of each round, specific game phases, end of game only, when an area is 'closed').",
+      "default_value": "End of game only"
+    },
+    {
+      "name": "Tie-breaking Rule",
+      "type": "string",
+      "description": "How are ties for majority resolved (e.g., no one scores, player with specific token scores, player earlier in turn order scores).",
+      "default_value": "No one scores for the tied rank"
+    },
+    {
+      "name": "Value of Areas",
+      "type": "string/object",
+      "description": "Do different areas provide different points or benefits? Are these values fixed or dynamic?",
+      "default_value": "All areas provide equal points"
+    },
+    {
+      "name": "Type of Presence",
+      "type": "string",
+      "description": "What constitutes 'presence' or 'influence' (e.g., number of units, total strength of units, specific control markers, influence tracks).",
+      "default_value": "Number of units"
+    },
+    {
+      "name": "Scoring Ranks",
+      "type": "string",
+      "description": "Does only the majority player score, or do 1st, 2nd, 3rd place players score different amounts?",
+      "default_value": "Only majority (1st place) scores"
+    }
+  ],
+  "classification": "Area Control / Territory Building",
+  "sub_classification": [
+    "Influence Placement",
+    "Majority Scoring"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "area_movement",
+      "relationship_type": "often_used_to_establish_presence"
+    },
+    {
+      "mechanic_id": "worker_placement_001",
+      "relationship_type": "can_be_combined_if_workers_exert_influence"
+    },
+    {
+      "mechanic_id": "set_collection_001",
+      "relationship_type": "controlling_areas_can_contribute_to_sets"
+    },
+    {
+      "mechanic_id": "voting",
+      "relationship_type": "influence_can_be_akin_to_votes_in_an_area"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "El Grande",
+      "specific_implementation_notes": "The quintessential area majority game. Players place caballeros into regions and score based on majorities during specific scoring rounds."
+    },
+    {
+      "game_name": "Risk",
+      "specific_implementation_notes": "While primarily about elimination, holding entire continents (area majority) grants bonus armies."
+    },
+    {
+      "game_name": "Twilight Struggle",
+      "specific_implementation_notes": "Players place influence markers in countries. Scoring cards trigger scoring for regions based on presence, domination, or control (levels of majority)."
+    },
+    {
+      "game_name": "Ethnos",
+      "specific_implementation_notes": "Players place control markers in regions, and at the end of an age, score points based on who has the most markers in each region, with tie-breakers."
+    },
+    {
+      "game_name": "Small World",
+      "specific_implementation_notes": "Players try to conquer and hold regions on the map. Each region controlled by their active race scores points at the end of their turn."
+    }
+  ],
+  "notes_on_combination_modification": "Area majority is a highly interactive mechanic that often leads to direct or indirect conflict. The timing of scoring and the value of different areas are key variables. It can be combined with hidden unit deployment, variable player powers, or special actions that affect presence in areas."
+}

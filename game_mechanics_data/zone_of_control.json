@@ -1,0 +1,81 @@
+{
+  "id": "zone_of_control",
+  "name": "Zone of Control",
+  "bgg_url": "",
+  "description": "A mechanic, typically found in wargames or tactical combat games, where units exert influence or control over adjacent areas (hexes, squares, regions). Enemy units entering or moving within a unit's Zone of Control (ZoC) may be forced to stop, be attacked, or suffer other penalties. ZoCs restrict enemy movement and create defensive lines.",
+  "core_concepts": [
+    "Area denial",
+    "Movement restriction",
+    "Tactical positioning",
+    "Line of engagement",
+    "Forced stop/combat"
+  ],
+  "parameters": [
+    {
+      "name": "ZoC Extent",
+      "type": "string",
+      "description": "Which areas are affected by a unit's ZoC (e.g., all adjacent hexes, only frontal hexes, specific terrain types).",
+      "default_value": "All adjacent hexes"
+    },
+    {
+      "name": "ZoC Effect",
+      "type": "string",
+      "description": "What happens when an enemy unit enters/moves in a ZoC (e.g., must stop, attacked immediately, movement cost increased, cannot move further that turn).",
+      "default_value": "Must stop movement for the turn"
+    },
+    {
+      "name": "Unit Types and ZoC",
+      "type": "string",
+      "description": "Do different unit types have different ZoCs (e.g., stronger units have larger/stronger ZoCs, some units ignore ZoC)?",
+      "default_value": "All units exert the same ZoC"
+    },
+    {
+      "name": "Stacking/Multiple ZoCs",
+      "type": "string",
+      "description": "How do ZoCs from multiple friendly or enemy units interact? Are effects cumulative?",
+      "default_value": "ZoC effects are not cumulative; one unit's ZoC is enough."
+    }
+  ],
+  "classification": "Movement / Tactical Combat",
+  "sub_classification": [
+    "Area Control (micro)",
+    "Wargame Specific"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "area_movement",
+      "relationship_type": "ZoC_often_modifies_area_movement_rules"
+    },
+    {
+      "mechanic_id": "grid_movement",
+      "relationship_type": "commonly_used_on_grids"
+    },
+    {
+      "mechanic_id": "line_of_sight",
+      "relationship_type": "can_be_related_but_distinct_concept_for_targeting"
+    },
+    {
+      "mechanic_id": "area_impulse",
+      "relationship_type": "can_interact_with_movement_allowed_by_impulse"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Advanced Squad Leader (ASL)",
+      "specific_implementation_notes": "A classic detailed hex-and-counter wargame where ZoC is fundamental to infantry and vehicle movement and combat."
+    },
+    {
+      "game_name": "Panzer General / Panzer Corps series (video games)",
+      "specific_implementation_notes": "Units exert ZoC that stops enemies or forces combat if they try to move through."
+    },
+    {
+      "game_name": "Commands & Colors series",
+      "specific_implementation_notes": "Units exert ZoC, and units must stop upon entering an enemy ZoC unless specific card play or unit abilities allow otherwise (e.g., 'Retreat and Reform')."
+    },
+    {
+      "game_name": "BattleLore / Memoir '44",
+      "specific_implementation_notes": "Simplified ZoC rules where units often must stop or engage if they enter an adjacent enemy hex."
+    }
+  ],
+  "notes_on_combination_modification": "Zone of Control is a cornerstone of many tactical wargames. It can be made more or less 'sticky' or 'porous' based on the effects. Some units might negate ZoC, or ZoC might only affect certain types of movement (e.g., not retreat). Terrain often interacts with ZoC projection or effects."
+}

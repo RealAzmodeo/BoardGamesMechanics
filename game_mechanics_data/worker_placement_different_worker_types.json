@@ -1,0 +1,81 @@
+{
+  "id": "worker_placement_different_worker_types",
+  "name": "Worker Placement, Different Worker Types",
+  "bgg_url": "",
+  "description": "A variation of the Worker Placement mechanic where players not only place worker tokens to claim actions but also manage different types of workers. These worker types often have unique abilities, restrictions, or efficiencies. For example, some workers might be specialized for certain tasks (e.g., a 'farmer' worker is better at producing food, a 'scientist' worker is required for research actions), or some workers might be more powerful but rarer.",
+  "core_concepts": [
+    "Worker placement",
+    "Specialization",
+    "Resource management (workers as specialized resources)",
+    "Action selection with constraints",
+    "Optimization"
+  ],
+  "parameters": [
+    {
+      "name": "Worker Specializations",
+      "type": "array/object",
+      "description": "The different types of workers available and their unique abilities or restrictions (e.g., 'Type A can only use red actions', 'Type B provides +1 resource on wood spots').",
+      "default_value": "[{'type': 'Generalist', 'ability': 'None'}, {'type': 'SpecialistA', 'ability': 'Bonus on X actions'}]"
+    },
+    {
+      "name": "Acquisition of Worker Types",
+      "type": "string",
+      "description": "How are different worker types obtained or assigned (e.g., start with a mix, train generalists into specialists, hire specific types).",
+      "default_value": "Start with a predefined mix"
+    },
+    {
+      "name": "Action Space Requirements",
+      "type": "string",
+      "description": "Do certain action spaces require specific worker types, or do they provide different outcomes based on the worker type used?",
+      "default_value": "Some spaces grant bonuses for specific worker types"
+    },
+    {
+      "name": "Number of Each Worker Type",
+      "type": "integer/string",
+      "description": "How many of each worker type does a player control? Is this number fixed or can it change?",
+      "default_value": "Fixed starting set"
+    }
+  ],
+  "classification": "Worker Placement / Resource Management",
+  "sub_classification": [
+    "Specialized Labor",
+    "Asymmetric Worker Abilities"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "worker_placement",
+      "relationship_type": "specific_variant_of"
+    },
+    {
+      "mechanic_id": "variable_player_powers",
+      "relationship_type": "different_worker_types_can_feel_like_mini_variable_powers"
+    },
+    {
+      "mechanic_id": "action_drafting",
+      "relationship_type": "can_be_combined_if_drafting_actions_has_worker_type_dependencies"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Caylus",
+      "specific_implementation_notes": "While not strictly 'different types', the Provost (neutral worker controlled by players) and Bailiff (moves along track, affecting game end) act as special non-standard workers impacting the board."
+    },
+    {
+      "game_name": "Everdell",
+      "specific_implementation_notes": "Players have generic workers, but some unique critter cards and construction cards might grant special placement abilities or act as specialized 'workers' for certain effects."
+    },
+    {
+      "game_name": "Anachrony",
+      "specific_implementation_notes": "Players have different types of workers (Scientists, Engineers, Administrators, Geniuses) that are required or more effective for specific types of actions or buildings. Workers also need Exosuits to go to the capital."
+    },
+    {
+      "game_name": "Euphoria: Build a Better Dystopia",
+      "specific_implementation_notes": "Workers are dice, and their value matters. 'Aware' workers (high value dice) are more effective but contribute to ending the game if too many become aware."
+    },
+    {
+      "game_name": "Raiders of the North Sea / Scythia",
+      "specific_implementation_notes": "Players have different colored workers (e.g., black, grey, white) and some action spots require a specific color, or a higher-tier color, to be used."
+    }
+  ],
+  "notes_on_combination_modification": "This mechanic adds a layer of complexity and strategic choice to standard worker placement. Players must decide which worker types to acquire (if applicable) and how best to utilize their unique properties. It can increase replayability by making different strategic paths viable based on worker specialization."
+}

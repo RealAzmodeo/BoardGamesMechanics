@@ -1,0 +1,81 @@
+{
+  "id": "alliances",
+  "name": "Alliances",
+  "bgg_url": "",
+  "description": "A mechanic where players can form temporary or permanent pacts, treaties, or teams with other players. These alliances often involve sharing resources, coordinating strategies, non-aggression agreements, or working towards common goals. Alliances can be formal or informal, and the rules for forming, breaking, or betraying them are key aspects of the mechanic.",
+  "core_concepts": [
+    "Negotiation",
+    "Cooperation (conditional)",
+    "Betrayal (potential for)",
+    "Team play (dynamic or fixed)",
+    "Shared interests"
+  ],
+  "parameters": [
+    {
+      "name": "Formation Rules",
+      "type": "string",
+      "description": "How alliances are formed (e.g., mutual agreement, specific action, triggered by game state).",
+      "default_value": "Mutual agreement"
+    },
+    {
+      "name": "Benefits of Alliance",
+      "type": "string/object",
+      "description": "What advantages do allied players receive (e.g., shared victory conditions, resource sharing, defensive pacts, combined strength).",
+      "default_value": "Defensive pact (cannot attack ally)"
+    },
+    {
+      "name": "Breaking/Betrayal Rules",
+      "type": "string",
+      "description": "Conditions or consequences for breaking an alliance or betraying an ally.",
+      "default_value": "No formal penalty, but potential in-game repercussions from other players."
+    },
+    {
+      "name": "Alliance Exclusivity/Size",
+      "type": "string",
+      "description": "Can a player be in multiple alliances? How many players can be in one alliance?",
+      "default_value": "One alliance at a time, typically 2 players."
+    }
+  ],
+  "classification": "Player Interaction / Negotiation",
+  "sub_classification": [
+    "Diplomacy",
+    "Team Formation"
+  ],
+  "related_mechanics": [
+    {
+      "mechanic_id": "negotiation",
+      "relationship_type": "core_component_of"
+    },
+    {
+      "mechanic_id": "team_based_game",
+      "relationship_type": "alliances_can_formalize_into"
+    },
+    {
+      "mechanic_id": "traitor_game",
+      "relationship_type": "potential_for_betrayal_is_high"
+    },
+    {
+      "mechanic_id": "cooperative_game",
+      "relationship_type": "alliances_are_a_form_of_selective_cooperation"
+    }
+  ],
+  "examples_in_games": [
+    {
+      "game_name": "Diplomacy",
+      "specific_implementation_notes": "Core to the game, alliances are informal, constantly shifting, and betrayal is expected."
+    },
+    {
+      "game_name": "Twilight Imperium",
+      "specific_implementation_notes": "Players can make deals, form alliances (often non-binding), and trade support for promissory notes."
+    },
+    {
+      "game_name": "Dune / Rex: Final Days of an Empire",
+      "specific_implementation_notes": "Players can form formal alliances which allow them to combine forces and share victory conditions."
+    },
+    {
+      "game_name": "Root",
+      "specific_implementation_notes": "While not formal 'alliances' in all cases, factions often have to cooperate or make temporary deals to prevent a dominant player from winning, or some factions can form coalitions."
+    }
+  ],
+  "notes_on_combination_modification": "Alliances introduce a strong social and psychological layer to games. The potential for trust and betrayal creates memorable moments. They work well in games with direct player conflict or shared threats. Modifications can include hidden alliances, rules for forced alliances, or different levels of alliance commitment."
+}
